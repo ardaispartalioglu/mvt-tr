@@ -2168,7 +2168,7 @@ Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org
 Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
 </div>
 <p>Bu JSON dosyası, mvt-ios'un <code>Applications</code> modülü tarafından oluşturulur. Modül, cihazda yüklü uygulamaların listesini yedekteki <code>Info.plist</code> dosyasından veya bir dosya sistemi dökümündeki <code>iTunesMetadata.plist</code> dosyalarından çıkarır. Bu kayıtlar, uygulamanın kaynağına ve yüklenmesine ilişkin ayrıntılı bilgiler içerir.</p>
-<p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, süreçler ve uygulama kimlikleri her uygulamanın adına karşı kontrol edilir. Ayrıca AppStore'dan yüklenmemiş tüm uygulamalar işaretlenir. Eşleşmeler <em>applications_detected.json</em> dosyasında saklanır.</p>
+<p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, süreçler ve uygulama kimlikleri her uygulamanın adına karşı kontrol edilir. Ayrıca App Store'dan yüklenmemiş tüm uygulamalar işaretlenir. Eşleşmeler <em>applications_detected.json</em> dosyasında saklanır.</p>
 <hr />
 <h3 id="backup_infojson"><code>backup_info.json</code></h3>
 <div class="admonition info">
@@ -2184,7 +2184,7 @@ Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org
 <p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span>
 Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
 </div>
-<p>Bu JSON dosyası, mvt-ios'un <code>CacheFiles</code> modülü tarafından oluşturulur. Modül, diskte <em>Cache.db</em> adıyla saklanan tüm SQLite veritabanı dosyalarından kayıtları çıkarır. Bu veritabanları tipik olarak iOS'un <a href="https://developer.apple.com/documentation/foundation/nsurlcache">dahili URL önbelleklemesine</a> ait verileri içerir. Bu modül aracılığıyla, aksi hâlde erişilemeyecek olan, uygulamalar ve sistem servisleri tarafından gerçekleştirilen HTTP isteklerine ve yanıtlarına ilişkin kayıtları kurtarabilirsiniz. Örneğin, bir iOS servisinin ilk aşama kötü amaçlı yükü indirmeye çalışırken gerçekleştirdiği bir sömürü zincirinin parçası olan HTTP isteklerini görebilirsiniz.</p>
+<p>Bu JSON dosyası, mvt-ios'un <code>CacheFiles</code> modülü tarafından oluşturulur. Modül, diskte <em>Cache.db</em> adıyla saklanan tüm SQLite veri tabanı dosyalarından kayıtları çıkarır. Bu veritabanları tipik olarak iOS'un <a href="https://developer.apple.com/documentation/foundation/nsurlcache">dahili URL önbelleklemesine</a> ait verileri içerir. Bu modül aracılığıyla, aksi hâlde erişilemeyecek olan, uygulamalar ve sistem servisleri tarafından gerçekleştirilen HTTP isteklerine ve yanıtlarına ilişkin kayıtları kurtarabilirsiniz. Örneğin, bir iOS servisinin ilk aşama kötü amaçlı yükü indirmeye çalışırken gerçekleştirdiği bir sömürü zincirinin parçası olan HTTP isteklerini görebilirsiniz.</p>
 <p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar istenen URL'ye karşı kontrol edilir. Eşleşmeler <em>cache_files_detected.json</em> dosyasında saklanır.</p>
 <hr />
 <h3 id="calendarjson"><code>calendar.json</code></h3>
@@ -2193,7 +2193,7 @@ Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org
 <p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
 Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
 </div>
-<p>Bu JSON dosyası, mvt-ios'un <code>Calendar</code> modülü tarafından oluşturulur. Bu modül, <code>Calendar.sqlitedb</code> veritabanındaki tüm CalendarItems öğelerini çıkarır. Bu veritabanı, telefonda yüklü farklı takvimlerdeki tüm takvim girdilerini içerir.</p>
+<p>Bu JSON dosyası, mvt-ios'un <code>Calendar</code> modülü tarafından oluşturulur. Bu modül, <code>Calendar.sqlitedb</code> veri tabanındaki tüm CalendarItems öğelerini çıkarır. Bu veri tabanı, telefonda yüklü farklı takvimlerdeki tüm takvim girdilerini içerir.</p>
 <p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, e-posta adresleri farklı etkinlikleri davet edenin e-posta adresine karşı kontrol edilir. Eşleşmeler <em>calendar_detected.json</em> dosyasında saklanır.</p>
 <hr />
 <h3 id="callsjson"><code>calls.json</code></h3>
@@ -2202,7 +2202,7 @@ Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org
 <p>Yedek (şifrelenmişse): <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
 Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
 </div>
-<p>Bu JSON dosyası, mvt-ios'un <code>Calls</code> modülü tarafından oluşturulur. Modül, WhatsApp veya Skype gibi mesajlaşma uygulamalarından yapılanlar da dahil olmak üzere gelen ve giden aramaların kayıtlarını içeren <em>/private/var/mobile/Library/CallHistoryDB/CallHistory.storedata</em> konumundaki bir SQLite veritabanından kayıtları çıkarır.</p>
+<p>Bu JSON dosyası, mvt-ios'un <code>Calls</code> modülü tarafından oluşturulur. Modül, WhatsApp veya Skype gibi mesajlaşma uygulamalarından yapılanlar da dahil olmak üzere gelen ve giden aramaların kayıtlarını içeren <em>/private/var/mobile/Library/CallHistoryDB/CallHistory.storedata</em> konumundaki bir SQLite veri tabanından kayıtları çıkarır.</p>
 <hr />
 <h3 id="chrome_faviconjson"><code>chrome_favicon.json</code></h3>
 <div class="admonition info">
@@ -2210,7 +2210,7 @@ Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org
 <p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
 Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
 </div>
-<p>Bu JSON dosyası, mvt-ios'un <code>ChromeFavicon</code> modülü tarafından oluşturulur. Modül, favicon URL'leri ile bunları yükleyen ziyaret edilmiş URL'ler arasındaki eşlemeyi içeren <em>/private/var/mobile/Containers/Data/Application/*/Library/Application Support/Google/Chrome/Default/Favicons</em> konumundaki bir SQLite veritabanından kayıtları çıkarır.</p>
+<p>Bu JSON dosyası, mvt-ios'un <code>ChromeFavicon</code> modülü tarafından oluşturulur. Modül, favicon URL'leri ile bunları yükleyen ziyaret edilmiş URL'ler arasındaki eşlemeyi içeren <em>/private/var/mobile/Containers/Data/Application/*/Library/Application Support/Google/Chrome/Default/Favicons</em> konumundaki bir SQLite veri tabanından kayıtları çıkarır.</p>
 <p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar hem favicon URL'sine hem de ziyaret edilen URL'ye karşı kontrol edilir. Eşleşmeler <em>chrome_favicon_detected.json</em> dosyasında saklanır.</p>
 <hr />
 <h3 id="chrome_historyjson"><code>chrome_history.json</code></h3>
@@ -2219,7 +2219,7 @@ Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org
 <p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
 Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
 </div>
-<p>Bu JSON dosyası, mvt-ios'un <code>ChromeHistory</code> modülü tarafından oluşturulur. Modül, URL ziyaretlerinin geçmişini içeren <em>/private/var/mobile/Containers/Data/Application/*/Library/Application Support/Google/Chrome/Default/History</em> konumundaki bir SQLite veritabanından kayıtları çıkarır.</p>
+<p>Bu JSON dosyası, mvt-ios'un <code>ChromeHistory</code> modülü tarafından oluşturulur. Modül, URL ziyaretlerinin geçmişini içeren <em>/private/var/mobile/Containers/Data/Application/*/Library/Application Support/Google/Chrome/Default/History</em> konumundaki bir SQLite veri tabanından kayıtları çıkarır.</p>
 <p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar ziyaret edilen URL'ye karşı kontrol edilir. Eşleşmeler <em>chrome_history_detected.json</em> dosyasında saklanır.</p>
 <hr />
 <h3 id="configuration_profilesjson"><code>configuration_profiles.json</code></h3>
@@ -2237,7 +2237,7 @@ Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org
 <p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
 Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
 </div>
-<p>Bu JSON dosyası, mvt-ios'un <code>Contacts</code> modülü tarafından oluşturulur. Modül, telefonun adres defterinin kayıtlarını içeren <em>/private/var/mobile/Library/AddressBook/AddressBook.sqlitedb</em> konumundaki bir SQLite veritabanından kayıtları çıkarır. Bu veritabanı elbette tek başına herhangi bir kötü amaçlı gösterge içermez; ancak diğer uygulamalardan (iMessage, SMS vb.) gelen kayıtları karşılaştırmak ve bilinmeyen kaynaklardan gelenleri filtrelemek için kullanmak isteyebilirsiniz.</p>
+<p>Bu JSON dosyası, mvt-ios'un <code>Contacts</code> modülü tarafından oluşturulur. Modül, telefonun adres defterinin kayıtlarını içeren <em>/private/var/mobile/Library/AddressBook/AddressBook.sqlitedb</em> konumundaki bir SQLite veri tabanından kayıtları çıkarır. Bu veri tabanı elbette tek başına herhangi bir kötü amaçlı gösterge içermez; ancak diğer uygulamalardan (iMessage, SMS vb.) gelen kayıtları karşılaştırmak ve bilinmeyen kaynaklardan gelenleri filtrelemek için kullanmak isteyebilirsiniz.</p>
 <hr />
 <h3 id="firefox_faviconjson"><code>firefox_favicon.json</code></h3>
 <div class="admonition info">
@@ -2245,7 +2245,7 @@ Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org
 <p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
 Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
 </div>
-<p>Bu JSON dosyası, mvt-ios'un <code>FirefoxFavicon</code> modülü tarafından oluşturulur. Modül, favicon URL'leri ile bunları yükleyen ziyaret edilmiş URL'ler arasındaki eşlemeyi içeren <em>/private/var/mobile/profile.profile/browser.db</em> konumundaki bir SQLite veritabanından kayıtları çıkarır.</p>
+<p>Bu JSON dosyası, mvt-ios'un <code>FirefoxFavicon</code> modülü tarafından oluşturulur. Modül, favicon URL'leri ile bunları yükleyen ziyaret edilmiş URL'ler arasındaki eşlemeyi içeren <em>/private/var/mobile/profile.profile/browser.db</em> konumundaki bir SQLite veri tabanından kayıtları çıkarır.</p>
 <p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar hem favicon URL'sine hem de ziyaret edilen URL'ye karşı kontrol edilir. Eşleşmeler <em>firefox_favicon_detected.json</em> dosyasında saklanır.</p>
 <hr />
 <h3 id="firefox_historyjson"><code>firefox_history.json</code></h3>
@@ -2254,7 +2254,7 @@ Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org
 <p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
 Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
 </div>
-<p>Bu JSON dosyası, mvt-ios'un <code>FirefoxHistory</code> modülü tarafından oluşturulur. Modül, URL ziyaretlerinin geçmişini içeren <em>/private/var/mobile/profile.profile/browser.db</em> konumundaki bir SQLite veritabanından kayıtları çıkarır.</p>
+<p>Bu JSON dosyası, mvt-ios'un <code>FirefoxHistory</code> modülü tarafından oluşturulur. Modül, URL ziyaretlerinin geçmişini içeren <em>/private/var/mobile/profile.profile/browser.db</em> konumundaki bir SQLite veri tabanından kayıtları çıkarır.</p>
 <p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar ziyaret edilen URL'ye karşı kontrol edilir. Eşleşmeler <em>firefox_history_detected.json</em> dosyasında saklanır.</p>
 <hr />
 <h3 id="global_preferencesjson"><code>global_preferences.json</code></h3>
@@ -2280,7 +2280,7 @@ Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org
 <p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
 Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
 </div>
-<p>Bu JSON dosyası, mvt-ios'un <code>Shortcuts</code> modülü tarafından oluşturulur. Modül, Shortcuts uygulamasına ilişkin kayıtları içeren <em>/private/var/mobile/Library/Shortcuts/Shortcuts.sqlite</em> konumundaki bir SQLite veritabanından kayıtları çıkarır. Shortcuts, kullanıcıların cihazlarında belirli eylemleri otomatikleştirmesine olanak tanıyan yerleşik bir iOS özelliğidir. Bazı durumlarda meşru Shortcuts uygulaması, casus yazılımlar tarafından enfekte edilmiş cihazlarda kalıcılık sağlamak amacıyla kötüye kullanılabilir.</p>
+<p>Bu JSON dosyası, mvt-ios'un <code>Shortcuts</code> modülü tarafından oluşturulur. Modül, Shortcuts uygulamasına ilişkin kayıtları içeren <em>/private/var/mobile/Library/Shortcuts/Shortcuts.sqlite</em> konumundaki bir SQLite veri tabanından kayıtları çıkarır. Shortcuts, kullanıcıların cihazlarında belirli eylemleri otomatikleştirmesine olanak tanıyan yerleşik bir iOS özelliğidir. Bazı durumlarda meşru Shortcuts uygulaması, casus yazılımlar tarafından enfekte edilmiş cihazlarda kalıcılık sağlamak amacıyla kötüye kullanılabilir.</p>
 <hr />
 <h3 id="interaction_cjson"><code>interaction_c.json</code></h3>
 <div class="admonition info">
@@ -2288,7 +2288,7 @@ Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org
 <p>Yedek (şifrelenmişse): <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
 Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
 </div>
-<p>Bu JSON dosyası, mvt-ios'un <code>InteractionC</code> modülü tarafından oluşturulur. Modül, kullanıcının yüklü uygulamalarla etkileşimlerine ilişkin ayrıntıları içeren <em>/private/var/mobile/Library/CoreDuet/People/interactionC.db</em> konumundaki bir SQLite veritabanından kayıtları çıkarır.</p>
+<p>Bu JSON dosyası, mvt-ios'un <code>InteractionC</code> modülü tarafından oluşturulur. Modül, kullanıcının yüklü uygulamalarla etkileşimlerine ilişkin ayrıntıları içeren <em>/private/var/mobile/Library/CoreDuet/People/interactionC.db</em> konumundaki bir SQLite veri tabanından kayıtları çıkarır.</p>
 <hr />
 <h3 id="locationd_clientsjson"><code>locationd_clients.json</code></h3>
 <div class="admonition info">
@@ -2304,7 +2304,7 @@ Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org
 <p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
 Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span></p>
 </div>
-<p>Bu JSON dosyası, mvt-ios'un <code>Manifest</code> modülü tarafından oluşturulur. Modül, iTunes yedeklerinde bulunan ve yerel olarak yedeklenen dosyaları iOS cihazındaki orijinal yollarla eşleştiren <em>Manifest.db</em> SQLite veritabanından kayıtları çıkarır.</p>
+<p>Bu JSON dosyası, mvt-ios'un <code>Manifest</code> modülü tarafından oluşturulur. Modül, iTunes yedeklerinde bulunan ve yerel olarak yedeklenen dosyaları iOS cihazındaki orijinal yollarla eşleştiren <em>Manifest.db</em> SQLite veri tabanından kayıtları çıkarır.</p>
 <p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar orijinal göreli yola karşı kontrol edilir. Bazı durumlarda, örneğin tarayıcı önbellek klasörlerinde olduğu gibi, adında alan adı bulunan dosya kayıtları olabilir. Eşleşmeler <em>manifest_detected.json</em> dosyasında saklanır.</p>
 <p>Eksik bir yedek, manifest dosyasında yine de edinemediği dosyaları listeler. Bu kayıtlar bir <code>"missing": true</code> alanı taşır ve modül bunlardan kaç tanesinin bulunduğunu bildirir. Bunu, bir artefaktın edinilememesi nedeniyle hiçbir sonuç döndürmeyen bir modülü, söz konusu artefakta hiç sahip olmamış bir cihazda hiçbir şey bulamayan bir modülden ayırt etmek için kullanın.</p>
 <p>Dosyalar, yedek klasörü içinde beklenen yollarında saklanmalıdır. Modül, yedek dosyalarını listelemeyi tamamlayamazsa bir uyarı kaydeder ve eksik dosya kontrolünü atlar; manifest üst verileri yine de çıkarılır.</p>
@@ -2324,7 +2324,7 @@ Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org
 <p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
 Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
 </div>
-<p>Bu JSON dosyası, mvt-ios'un <code>Datausage</code> modülü tarafından oluşturulur. Modül, sistemde çalışan süreçlerin ağ verisi kullanım geçmişini içeren <em>/private/var/wireless/Library/Databases/DataUsage.sqlite</em> konumundaki bir SQLite veritabanından kayıtları çıkarır. WiFi üzerinden ağ trafiğini kaydetmez (<code>WIFI_IN</code> ve <code>WIFI_OUT</code> alanları her zaman boştur) ve <code>WWAN_IN</code> ile <code>WWAN_OUT</code> alanları bayt cinsinden saklanır. Ağ istatistiklerinin yanı sıra bu kayıtlar özellikle önemlidir; çünkü kötü amaçlı süreç yürütmelerine ve ilgili zaman aralığına dair izler gösterebilir. Özellikle geçerli bir bundle ID'ye sahip olmayan süreçler özel dikkat gerektirebilir.</p>
+<p>Bu JSON dosyası, mvt-ios'un <code>Datausage</code> modülü tarafından oluşturulur. Modül, sistemde çalışan süreçlerin ağ verisi kullanım geçmişini içeren <em>/private/var/wireless/Library/Databases/DataUsage.sqlite</em> konumundaki bir SQLite veri tabanından kayıtları çıkarır. WiFi üzerinden ağ trafiğini kaydetmez (<code>WIFI_IN</code> ve <code>WIFI_OUT</code> alanları her zaman boştur) ve <code>WWAN_IN</code> ile <code>WWAN_OUT</code> alanları bayt cinsinden saklanır. Ağ istatistiklerinin yanı sıra bu kayıtlar özellikle önemlidir; çünkü kötü amaçlı süreç yürütmelerine ve ilgili zaman aralığına dair izler gösterebilir. Özellikle geçerli bir bundle ID'ye sahip olmayan süreçler özel dikkat gerektirebilir.</p>
 <p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, süreç adlarına karşı kontrol edilir. Eşleşmeler <em>datausage_detected.json</em> dosyasında saklanır. Tam bir dosya sistemi dökümü üzerinde çalışılıyorsa ve komut satırından <code>--fast</code> bayrağı etkinleştirilmemişse, mvt-ios şüpheli görünen süreçleri vurgular ve dökümde aynı ada sahip bir ikili dosyanın bulunup bulunmadığını kontrol eder.</p>
 <hr />
 <h3 id="netusagejson"><code>netusage.json</code></h3>
@@ -2333,7 +2333,7 @@ Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org
 <p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span>
 Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
 </div>
-<p>Bu JSON dosyası, mvt-ios'un <code>Netusage</code> modülü tarafından oluşturulur. Modül, sistemde çalışan süreçlerin veri kullanım geçmişini içeren <em>/private/var/networkd/netusage.sqlite</em> konumundaki bir SQLite veritabanından kayıtları çıkarır. Ağ istatistiklerinin yanı sıra bu kayıtlar özellikle önemlidir; çünkü kötü amaçlı süreç yürütmelerine ve ilgili zaman aralığına dair izler gösterebilir. Özellikle geçerli bir bundle ID'ye sahip olmayan süreçler özel dikkat gerektirebilir.</p>
+<p>Bu JSON dosyası, mvt-ios'un <code>Netusage</code> modülü tarafından oluşturulur. Modül, sistemde çalışan süreçlerin veri kullanım geçmişini içeren <em>/private/var/networkd/netusage.sqlite</em> konumundaki bir SQLite veri tabanından kayıtları çıkarır. Ağ istatistiklerinin yanı sıra bu kayıtlar özellikle önemlidir; çünkü kötü amaçlı süreç yürütmelerine ve ilgili zaman aralığına dair izler gösterebilir. Özellikle geçerli bir bundle ID'ye sahip olmayan süreçler özel dikkat gerektirebilir.</p>
 <p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, süreç adlarına karşı kontrol edilir. Eşleşmeler <em>netusage_detected.json</em> dosyasında saklanır. Tam bir dosya sistemi dökümü üzerinde çalışılıyorsa ve komut satırından <code>--fast</code> bayrağı etkinleştirilmemişse, mvt-ios şüpheli görünen süreçleri vurgular ve dökümde aynı ada sahip bir ikili dosyanın bulunup bulunmadığını kontrol eder.</p>
 <hr />
 <h3 id="profile_eventsjson"><code>profile_events.json</code></h3>
@@ -2386,7 +2386,7 @@ Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org
 <p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
 Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
 </div>
-<p>Bu JSON dosyası, mvt-ios'un <code>SMS</code> modülü tarafından oluşturulur. Modül, <em>/private/var/mobile/Library/SMS/sms.db</em> konumundaki SQLite veritabanından bir SMS mesajları listesi çıkarır.</p>
+<p>Bu JSON dosyası, mvt-ios'un <code>SMS</code> modülü tarafından oluşturulur. Modül, <em>/private/var/mobile/Library/SMS/sms.db</em> konumundaki SQLite veri tabanından bir SMS mesajları listesi çıkarır.</p>
 <p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar çıkarılan HTTP bağlantılarına karşı kontrol edilir. Eşleşmeler <em>sms_detected.json</em> dosyasında saklanır.</p>
 <hr />
 <h3 id="urlsjson"><code>urls.json</code></h3>
@@ -2401,7 +2401,7 @@ mesajın zaman damgasını ve <code>sms</code> ya da <code>whatsapp</code> kayna
 <p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
 Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
 </div>
-<p>Bu JSON dosyası, mvt-ios'un <code>SMSAttachments</code> modülü tarafından oluşturulur. Modül, <code>SMS</code> modülünün kullandığı aynı veritabanından SMS veya iMessage yoluyla gönderilen ek dosyalara ilişkin ayrıntıları çıkarır. Bu kayıtlar, dosya biçimi ayrıştırıcılarındaki potansiyel güvenlik açıklarından veya Messages uygulamasının diğer dosya işleme biçimlerinden yararlanmaya yönelik sömürü girişimlerine işaret edebilecek benzersiz kalıpları belirtmek için yararlı olabilir.</p>
+<p>Bu JSON dosyası, mvt-ios'un <code>SMSAttachments</code> modülü tarafından oluşturulur. Modül, <code>SMS</code> modülünün kullandığı aynı veri tabanından SMS veya iMessage yoluyla gönderilen ek dosyalara ilişkin ayrıntıları çıkarır. Bu kayıtlar, dosya biçimi ayrıştırıcılarındaki potansiyel güvenlik açıklarından veya Messages uygulamasının diğer dosya işleme biçimlerinden yararlanmaya yönelik sömürü girişimlerine işaret edebilecek benzersiz kalıpları belirtmek için yararlı olabilir.</p>
 <hr />
 <h3 id="tccjson"><code>tcc.json</code></h3>
 <div class="admonition info">
@@ -2409,7 +2409,7 @@ Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org
 <p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
 Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
 </div>
-<p>Bu JSON dosyası, mvt-ios'un <code>TCC</code> modülü tarafından oluşturulur. Modül, hangi uygulamalara mikrofon, kamera veya konum gibi servislere erişim izni verildiğini ya da verilmediğini gösteren bir liste içeren <em>/private/var/mobile/Library/TCC/TCC.db</em> konumundaki bir SQLite veritabanından kayıtları çıkarır.</p>
+<p>Bu JSON dosyası, mvt-ios'un <code>TCC</code> modülü tarafından oluşturulur. Modül, hangi uygulamalara mikrofon, kamera veya konum gibi servislere erişim izni verildiğini ya da verilmediğini gösteren bir liste içeren <em>/private/var/mobile/Library/TCC/TCC.db</em> konumundaki bir SQLite veri tabanından kayıtları çıkarır.</p>
 <hr />
 <h3 id="version_historyjson"><code>version_history.json</code></h3>
 <div class="admonition info">
@@ -2470,8 +2470,8 @@ Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org
 <p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
 Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
 </div>
-<p>Bu JSON dosyası, mvt-ios'un <code>WhatsApp</code> modülü tarafından oluşturulur. Modül, <em>private/var/mobile/Containers/Shared/AppGroup/*/ChatStorage.sqlite</em> konumundaki SQLite veritabanından bir WhatsApp mesajları listesi çıkarır; ayrıca her sohbet oturumu için, o konuşmanın ilk ve son etkileşim tarihlerini içeren bir kayıt (<code>"record_type": "chat_session"</code> ile işaretlenmiş) üretir. Sohbet oturumları <code>chat_first_message</code> ve <code>chat_last_message</code> zaman çizelgesi olaylarını üretir; grup sohbetleri ayrıca bir <code>group_created</code> olayı üretir. Sohbetteki en son mesajlar silinmişse, bir sohbet oturumunun son mesaj tarihi, saklanan en yeni mesajının tarihinden daha ileri olabilir.</p>
-<p>Güncel WhatsApp sürümleri, bire bir sohbet oturumlarını kişinin telefon numarası yerine opak bir LID tanımlayıcısıyla anahtarlar. Modül bunları, aynı uygulama grubundaki <em>LID.sqlite</em> veritabanındaki <code>ZWAPHONENUMBERLIDPAIR</code> tablosunu (veya bu tabloyu orada saklayan sürümlerde <em>ChatStorage.sqlite</em>'ın kendisini) kullanarak çözer; sohbet oturumu kayıtlarında <code>partner_resolved_phone_number</code> alanını doldurur ve zaman çizelgesi olaylarında telefon numarasını kullanır. Her LID-telefon numarası çifti de bir kayıt olarak (<code>"record_type": "lid_phone_number_pair"</code>) çıkarılır ve WhatsApp'ın bu ilişkiyi ne zaman öğrendiğini işaretleyen bir <code>lid_pair_recorded</code> zaman çizelgesi olayı üretir.</p>
+<p>Bu JSON dosyası, mvt-ios'un <code>WhatsApp</code> modülü tarafından oluşturulur. Modül, <em>private/var/mobile/Containers/Shared/AppGroup/*/ChatStorage.sqlite</em> konumundaki SQLite veri tabanından bir WhatsApp mesajları listesi çıkarır; ayrıca her sohbet oturumu için, o konuşmanın ilk ve son etkileşim tarihlerini içeren bir kayıt (<code>"record_type": "chat_session"</code> ile işaretlenmiş) üretir. Sohbet oturumları <code>chat_first_message</code> ve <code>chat_last_message</code> zaman çizelgesi olaylarını üretir; grup sohbetleri ayrıca bir <code>group_created</code> olayı üretir. Sohbetteki en son mesajlar silinmişse, bir sohbet oturumunun son mesaj tarihi, saklanan en yeni mesajının tarihinden daha ileri olabilir.</p>
+<p>Güncel WhatsApp sürümleri, bire bir sohbet oturumlarını kişinin telefon numarası yerine opak bir LID tanımlayıcısıyla anahtarlar. Modül bunları, aynı uygulama grubundaki <em>LID.sqlite</em> veri tabanındaki <code>ZWAPHONENUMBERLIDPAIR</code> tablosunu (veya bu tabloyu orada saklayan sürümlerde <em>ChatStorage.sqlite</em>'ın kendisini) kullanarak çözer; sohbet oturumu kayıtlarında <code>partner_resolved_phone_number</code> alanını doldurur ve zaman çizelgesi olaylarında telefon numarasını kullanır. Her LID-telefon numarası çifti de bir kayıt olarak (<code>"record_type": "lid_phone_number_pair"</code>) çıkarılır ve WhatsApp'ın bu ilişkiyi ne zaman öğrendiğini işaretleyen bir <code>lid_pair_recorded</code> zaman çizelgesi olayı üretir.</p>
 <p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar çıkarılan HTTP bağlantılarına karşı kontrol edilir. Eşleşmeler <em>whatsapp_detected.json</em> dosyasında saklanır.</p>
 <hr />
 <h3 id="whatsapp_contactsjson"><code>whatsapp_contacts.json</code></h3>
@@ -2480,12 +2480,12 @@ Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org
 <p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
 Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
 </div>
-<p>Bu JSON dosyası, mvt-ios'un <code>WhatsappContacts</code> modülü tarafından oluşturulur. Modül, <em>private/var/mobile/Containers/Shared/AppGroup/*/ContactsV2.sqlite</em> konumundaki SQLite veritabanından WhatsApp kişi kayıtlarını çıkarır; bunlar her kişinin telefon numarasını, WhatsApp ve LID tanımlayıcılarını ve <em>ChatStorage.sqlite</em> içinde kaydedilmeyen kişi başına kaybolan mesajlar zamanlayıcısını içerir. Bir kişi kaydında saklanan her zaman damgası bir zaman çizelgesi olayı üretir: <code>disappearing_mode_set</code> (kaybolan mesajlar zamanlayıcısının en son ne zaman değiştirildiği), <code>about_changed</code> (kişinin "about" metnini en son ne zaman değiştirdiği), <code>about_expiration</code> (süreli bir "about" metninin ne zaman sona ereceği) ve <code>contact_last_updated</code> (kişi kaydının en son ne zaman güncellendiği).</p>
-<p>Bu veritabanı artımlı yedeklerde sıklıkla eksiktir. Bulunamadığında modül bir uyarı kaydeder ve hiçbir sonuç üretmez; bu durumda sohbetlerin kaybolan mesajlar durumu yedekten belirlenemez.</p>
+<p>Bu JSON dosyası, mvt-ios'un <code>WhatsappContacts</code> modülü tarafından oluşturulur. Modül, <em>private/var/mobile/Containers/Shared/AppGroup/*/ContactsV2.sqlite</em> konumundaki SQLite veri tabanından WhatsApp kişi kayıtlarını çıkarır; bunlar her kişinin telefon numarasını, WhatsApp ve LID tanımlayıcılarını ve <em>ChatStorage.sqlite</em> içinde kaydedilmeyen kişi başına kaybolan mesajlar zamanlayıcısını içerir. Bir kişi kaydında saklanan her zaman damgası bir zaman çizelgesi olayı üretir: <code>disappearing_mode_set</code> (kaybolan mesajlar zamanlayıcısının en son ne zaman değiştirildiği), <code>about_changed</code> (kişinin "about" metnini en son ne zaman değiştirdiği), <code>about_expiration</code> (süreli bir "about" metninin ne zaman sona ereceği) ve <code>contact_last_updated</code> (kişi kaydının en son ne zaman güncellendiği).</p>
+<p>Bu veri tabanı artımlı yedeklerde sıklıkla eksiktir. Bulunamadığında modül bir uyarı kaydeder ve hiçbir sonuç üretmez; bu durumda sohbetlerin kaybolan mesajlar durumu yedekten belirlenemez.</p>
 <hr />
 <h2 id="check-sysdiagnose-ile-ckarlan-kaytlar"><code>check-sysdiagnose</code> ile Çıkarılan Kayıtlar</h2>
 <h3 id="sysdiagnose_infojson"><code>sysdiagnose_info.json</code></h3>
-<p>Bu JSON dosyası, mvt-ios'un <code>SysdiagnoseInfo</code> modülü tarafından oluşturulur. Modül, cihaza ve sysdiagnose'un kendisine ilişkin ayrıntıları çıkarır: remotectl döküm durumundan ve mobil etkinleştirme isteğinden product type ve model, iOS sürümü ve build, seri numarası, IMEI, MEID ve UDID; App Store daemon veritabanından Apple hesabının adı ve e-posta adresi (yeni iOS sürümlerinde artık bir sysdiagnose'un parçası değildir, eski arşivlerden hâlâ okunur) ve <em>sysdiagnose.log</em> dosyasından arşivin orijinal dosya adı ve oluşturulma zamanı.</p>
+<p>Bu JSON dosyası, mvt-ios'un <code>SysdiagnoseInfo</code> modülü tarafından oluşturulur. Modül, cihaza ve sysdiagnose'un kendisine ilişkin ayrıntıları çıkarır: remotectl döküm durumundan ve mobil etkinleştirme isteğinden product type ve model, iOS sürümü ve build, seri numarası, IMEI, MEID ve UDID; App Store daemon veri tabanından Apple hesabının adı ve e-posta adresi (yeni iOS sürümlerinde artık bir sysdiagnose'un parçası değildir, eski arşivlerden hâlâ okunur) ve <em>sysdiagnose.log</em> dosyasından arşivin orijinal dosya adı ve oluşturulma zamanı.</p>
 
 
 
