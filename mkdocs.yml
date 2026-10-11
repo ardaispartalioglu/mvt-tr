@@ -1,0 +1,60 @@
+site_name: Mobile Verification Toolkit — Türkçe
+site_url: https://ardaispartalioglu.github.io/mvt-tr/
+repo_url: https://github.com/ardaispartalioglu/mvt-tr
+edit_uri: edit/main/docs/
+copyright: Copyright &copy; 2021-2023 MVT Project Developers | Gayriresmî Türkçe çeviri
+site_description: Mobile Verification Toolkit Dokümantasyonu — resmî olmayan Türkçe çeviri
+not_in_nav: |
+    android/adb.md
+    ios/backup/libimobiledevice.md
+markdown_extensions:
+    - attr_list
+    - admonition
+    - pymdownx.emoji:
+        emoji_index: !!python/name:material.extensions.emoji.twemoji
+        emoji_generator: !!python/name:material.extensions.emoji.to_svg
+    - pymdownx.superfences
+    - pymdownx.inlinehilite
+    - pymdownx.highlight:
+        use_pygments: true
+theme:
+    name: material
+    language: tr
+    features:
+        - tabs
+plugins:
+    - search
+    - mkdocstrings
+extra:
+    social:
+        - icon: fontawesome/brands/github
+          link: https://github.com/mvt-project/mvt
+nav:
+    - Hoş Geldiniz: "index.md"
+    - Giriş: "introduction.md"
+    - Kurulum: "install.md"
+    - Komut Tamamlama: "command_completion.md"
+    - Docker Kullanımı: "docker.md"
+    - iOS için MVT:
+        - iOS Adli Bilişim Metodolojisi: "ios/methodology.md"
+        - pymobiledevice3 Kurulumu: "ios/install.md"
+        - iTunes Yedeğini Kontrol Etme:
+            - iTunes ile Yedek Alma: "ios/backup/itunes.md"
+            - pymobiledevice3 ile Yedek Alma: "ios/backup/pymobiledevice3.md"
+            - Yedeği mvt-ios ile Kontrol Etme: "ios/backup/check.md"
+        - Dosya Sistemi Dökümünü Kontrol Etme:
+            - Dosya Sistemi Dökümü Alma: "ios/filesystem/dump.md"
+            - Dökümü mvt-ios ile Kontrol Etme: "ios/filesystem/check.md"
+        - Sysdiagnose Kontrolü: "ios/sysdiagnose.md"
+        - mvt-ios ile Çıkarılan Kayıtlar: "ios/records.md"
+    - Android için MVT:
+        - Android Adli Bilişim Metodolojisi: "android/methodology.md"
+        - Android Yedeği Kontrolü (SMS Mesajları): "android/backup.md"
+        - Android İzinsiz Giriş Logları: "android/intrusion_logs.md"
+    - İhlal Göstergeleri (IOC): "iocs.md"
+    - Geliştirme:
+        - Geliştirme Talimatları: "development/index.md"
+        - Özel CLI Komutları: "development/custom_commands.md"
+        - Eklenti Yapılandırması: "development/plugin_configuration.md"
+        - Eklentileri Yönetme: "development/plugins.md"
+    - Lisans: "license.md"

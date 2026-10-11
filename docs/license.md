@@ -1,0 +1,9 @@
+# MVT Lisansı
+
+MVT'nin amacı, sofistike mobil casus yazılım saldırılarının hedefi olabilecek kişilerin — özellikle sivil toplum üyelerinin ve marjinalleştirilmiş toplulukların — cihazlarının ***rıza temelli adli analizini*** kolaylaştırmaktır. MVT'nin, rızası olmayan bireylerin mahremiyetinin ihlal edilmesine olanak sağlamasını istemiyoruz. Bu nedenle bu lisansın amacı, MVT'nin (ve aynı şekilde lisanslanan diğer yazılımların) *adversarial forensics* (karşı rızalı/düşmanca adli analiz) amacıyla kullanımını yasaklamaktır.
+
+Bunu sağlamak amacıyla MVT, [Mozilla Public License v2.0](https://www.mozilla.org/MPL) lisansının bir uyarlaması altında yayımlanmaktadır. Bu değiştirilmiş lisans, 3.0 numaralı yeni bir madde içerir: "Consensual Use Restriction" (Rıza Temelli Kullanım Kısıtlaması). Bu madde, lisanslı yazılımın (ve ondan türetilen herhangi bir *"Larger Work"*'ün) kullanımına yalnızca, verisi çıkarılan ve/veya analiz edilen kişinin/kişilerin (*"Data Owner"* — Veri Sahibi) açık rızasıyla izin verir.
+
+**Lütfen dikkat:** bu lisans bazı kullanım kısıtlamaları getirdiğinden, bu lisansı kullanan yazılımlar, Free Software Foundation (FSF) tarafından yayımlanan [*"Free Software Definition"* ("Özgür Yazılım Tanımı")](https://www.gnu.org/philosophy/free-sw.en.html) belgesindeki *"freedom 0"* ("özgürlük 0") ilkesini ihlal eder ve bu nedenle FSF'ye göre "Özgür Yazılım" ("Free Software") olarak kabul edilemez. Benzer şekilde, bu yazılımlar Open Source Initiative (OSI) tarafından yayımlanan [*"Open Source Definition"* ("Açık Kaynak Tanımı")](https://opensource.org/osd) belgesindeki *"No Discrimination Against Fields of Endeavor"* ("Faaliyet Alanlarına Karşı Ayrımcılık Yapılmaması") ölçütünü de ihlal edebilir; bu nedenle bu lisansı kullanan yazılımlar, OSI'ye göre "Açık Kaynak" ("Open Source") olarak da kabul edilemeyebilir.
+
+[LICENSE dosyasını okuyun](https://github.com/mvt-project/mvt/blob/main/LICENSE)
