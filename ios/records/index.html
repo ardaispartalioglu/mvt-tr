@@ -1,0 +1,2565 @@
+
+<!doctype html>
+<html lang="tr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Mobile Verification Toolkit Dokümantasyonu — resmî olmayan Türkçe çeviri">
+      
+      
+      
+        <link rel="canonical" href="https://ardaispartalioglu.github.io/mvt-tr/ios/records/">
+      
+      
+        <link rel="prev" href="../sysdiagnose/">
+      
+      
+        <link rel="next" href="../../android/methodology/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>mvt-ios ile Çıkarılan Kayıtlar - Mobile Verification Toolkit — Türkçe</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mvt-ios-ile-ckarlan-kaytlar" class="md-skip">
+          Ana içeriğe geç
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Başlık">
+    <a href="../.." title="Mobile Verification Toolkit — Türkçe" class="md-header__button md-logo" aria-label="Mobile Verification Toolkit — Türkçe" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mobile Verification Toolkit — Türkçe
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              mvt-ios ile Çıkarılan Kayıtlar
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Ara" placeholder="Ara" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Ara">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Temizle" aria-label="Temizle" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Arama başlatılıyor
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ardaispartalioglu/mvt-tr" title="Depoya git" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigasyon" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Mobile Verification Toolkit — Türkçe" class="md-nav__button md-logo" aria-label="Mobile Verification Toolkit — Türkçe" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Mobile Verification Toolkit — Türkçe
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ardaispartalioglu/mvt-tr" title="Depoya git" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hoş Geldiniz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Giriş
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kurulum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../command_completion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Komut Tamamlama
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker Kullanımı
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    iOS için MVT
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    iOS için MVT
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../methodology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    iOS Adli Bilişim Metodolojisi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pymobiledevice3 Kurulumu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    iTunes Yedeğini Kontrol Etme
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    iTunes Yedeğini Kontrol Etme
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backup/itunes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    iTunes ile Yedek Alma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backup/pymobiledevice3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pymobiledevice3 ile Yedek Alma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backup/check/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Yedeği mvt-ios ile Kontrol Etme
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dosya Sistemi Dökümünü Kontrol Etme
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dosya Sistemi Dökümünü Kontrol Etme
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filesystem/dump/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dosya Sistemi Dökümü Alma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filesystem/check/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dökümü mvt-ios ile Kontrol Etme
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sysdiagnose/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sysdiagnose Kontrolü
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    mvt-ios ile Çıkarılan Kayıtlar
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    mvt-ios ile Çıkarılan Kayıtlar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#check-fs-veya-check-backup-ile-ckarlan-kaytlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        check-fs veya check-backup ile Çıkarılan Kayıtlar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="check-fs veya check-backup ile Çıkarılan Kayıtlar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analyticsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        analytics.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applicationsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        applications.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup_infojson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        backup_info.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache_filesjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cache_files.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calendarjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        calendar.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#callsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        calls.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chrome_faviconjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        chrome_favicon.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chrome_historyjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        chrome_history.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_profilesjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        configuration_profiles.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contactsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        contacts.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firefox_faviconjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        firefox_favicon.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firefox_historyjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        firefox_history.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global_preferencesjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        global_preferences.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id_status_cachejson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        id_status_cache.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shortcutsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shortcuts.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interaction_cjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        interaction_c.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locationd_clientsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        locationd_clients.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manifestjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        manifest.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#os_analytics_ad_dailyjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        os_analytics_ad_daily.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datausagejson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        datausage.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#netusagejson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        netusage.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profile_eventsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        profile_events.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safari_browser_statejson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        safari_browser_state.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safari_faviconjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        safari_favicon.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safari_historyjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        safari_history.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shutdown_logjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shutdown_log.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sms.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#urlsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        urls.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sms_attachmentsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sms_attachments.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tccjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tcc.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version_historyjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        version_history.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webkit_indexeddbjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        webkit_indexeddb.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webkit_local_storagejson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        webkit_local_storage.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webkit_resource_load_statisticsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        webkit_resource_load_statistics.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webkit_safari_view_servicejson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        webkit_safari_view_service.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webkit_session_resource_logjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        webkit_session_resource_log.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whatsappjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        whatsapp.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whatsapp_contactsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        whatsapp_contacts.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-sysdiagnose-ile-ckarlan-kaytlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        check-sysdiagnose ile Çıkarılan Kayıtlar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="check-sysdiagnose ile Çıkarılan Kayıtlar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sysdiagnose_infojson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sysdiagnose_info.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Android için MVT
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Android için MVT
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/methodology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Android Adli Bilişim Metodolojisi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/backup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Android Yedeği Kontrolü (SMS Mesajları)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/intrusion_logs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Android İzinsiz Giriş Logları
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iocs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    İhlal Göstergeleri (IOC)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geliştirme
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Geliştirme
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geliştirme Talimatları
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/custom_commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Özel CLI Komutları
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/plugin_configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eklenti Yapılandırması
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eklentileri Yönetme
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lisans
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#check-fs-veya-check-backup-ile-ckarlan-kaytlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        check-fs veya check-backup ile Çıkarılan Kayıtlar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="check-fs veya check-backup ile Çıkarılan Kayıtlar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analyticsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        analytics.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applicationsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        applications.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup_infojson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        backup_info.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache_filesjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cache_files.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calendarjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        calendar.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#callsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        calls.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chrome_faviconjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        chrome_favicon.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chrome_historyjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        chrome_history.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration_profilesjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        configuration_profiles.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contactsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        contacts.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firefox_faviconjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        firefox_favicon.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firefox_historyjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        firefox_history.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global_preferencesjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        global_preferences.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id_status_cachejson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        id_status_cache.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shortcutsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shortcuts.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interaction_cjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        interaction_c.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locationd_clientsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        locationd_clients.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manifestjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        manifest.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#os_analytics_ad_dailyjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        os_analytics_ad_daily.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datausagejson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        datausage.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#netusagejson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        netusage.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profile_eventsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        profile_events.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safari_browser_statejson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        safari_browser_state.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safari_faviconjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        safari_favicon.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safari_historyjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        safari_history.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shutdown_logjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        shutdown_log.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sms.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#urlsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        urls.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sms_attachmentsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sms_attachments.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tccjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tcc.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version_historyjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        version_history.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webkit_indexeddbjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        webkit_indexeddb.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webkit_local_storagejson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        webkit_local_storage.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webkit_resource_load_statisticsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        webkit_resource_load_statistics.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webkit_safari_view_servicejson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        webkit_safari_view_service.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webkit_session_resource_logjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        webkit_session_resource_log.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whatsappjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        whatsapp.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whatsapp_contactsjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        whatsapp_contacts.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-sysdiagnose-ile-ckarlan-kaytlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        check-sysdiagnose ile Çıkarılan Kayıtlar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="check-sysdiagnose ile Çıkarılan Kayıtlar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sysdiagnose_infojson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sysdiagnose_info.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="mvt-ios-ile-ckarlan-kaytlar">mvt-ios ile Çıkarılan Kayıtlar</h1>
+<p>Bu sayfada, günlüklerin, yedeklerin veya dosya sistemi dökümlerinin analizi gerçekleştirilirken MVT tarafından oluşturulan dosyaların (makul ölçüde) güncel bir dökümünü bulabilirsiniz.</p>
+<h2 id="check-fs-veya-check-backup-ile-ckarlan-kaytlar"><code>check-fs</code> veya <code>check-backup</code> ile Çıkarılan Kayıtlar</h2>
+<h3 id="analyticsjson"><code>analytics.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek (şifrelenmişse): <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>Analytics</code> modülü tarafından oluşturulur. Modül, ağ iletişimi, sertifika sabitleme, TLS vb. hatalara ilişkin çeşitli analiz bilgileri içeren <em>private/var/Keychains/Analytics/*.db</em> konumundaki SQLite veritabanlarının içindeki plist dosyalarından kayıtları çıkarır.</p>
+<p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, süreçler ve alan adları plist dosyasının tüm alanlarına karşı kontrol edilir. Eşleşmeler <em>analytics_detected.json</em> dosyasında saklanır.</p>
+<hr />
+<h3 id="applicationsjson"><code>applications.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>Applications</code> modülü tarafından oluşturulur. Modül, cihazda yüklü uygulamaların listesini yedekteki <code>Info.plist</code> dosyasından veya bir dosya sistemi dökümündeki <code>iTunesMetadata.plist</code> dosyalarından çıkarır. Bu kayıtlar, uygulamanın kaynağına ve yüklenmesine ilişkin ayrıntılı bilgiler içerir.</p>
+<p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, süreçler ve uygulama kimlikleri her uygulamanın adına karşı kontrol edilir. Ayrıca AppStore'dan yüklenmemiş tüm uygulamalar işaretlenir. Eşleşmeler <em>applications_detected.json</em> dosyasında saklanır.</p>
+<hr />
+<h3 id="backup_infojson"><code>backup_info.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>BackupInfo</code> modülü tarafından oluşturulur. Modül; ad, telefon numarası, IMEI, product type ve sürüm gibi yedeğe ve cihaza ilişkin bazı ayrıntıları çıkarır.</p>
+<hr />
+<h3 id="cache_filesjson"><code>cache_files.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>CacheFiles</code> modülü tarafından oluşturulur. Modül, diskte <em>Cache.db</em> adıyla saklanan tüm SQLite veritabanı dosyalarından kayıtları çıkarır. Bu veritabanları tipik olarak iOS'un <a href="https://developer.apple.com/documentation/foundation/nsurlcache">dahili URL önbelleklemesine</a> ait verileri içerir. Bu modül aracılığıyla, aksi hâlde erişilemeyecek olan, uygulamalar ve sistem servisleri tarafından gerçekleştirilen HTTP isteklerine ve yanıtlarına ilişkin kayıtları kurtarabilirsiniz. Örneğin, bir iOS servisinin ilk aşama kötü amaçlı yükü indirmeye çalışırken gerçekleştirdiği bir sömürü zincirinin parçası olan HTTP isteklerini görebilirsiniz.</p>
+<p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar istenen URL'ye karşı kontrol edilir. Eşleşmeler <em>cache_files_detected.json</em> dosyasında saklanır.</p>
+<hr />
+<h3 id="calendarjson"><code>calendar.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>Calendar</code> modülü tarafından oluşturulur. Bu modül, <code>Calendar.sqlitedb</code> veritabanındaki tüm CalendarItems öğelerini çıkarır. Bu veritabanı, telefonda yüklü farklı takvimlerdeki tüm takvim girdilerini içerir.</p>
+<p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, e-posta adresleri farklı etkinlikleri davet edenin e-posta adresine karşı kontrol edilir. Eşleşmeler <em>calendar_detected.json</em> dosyasında saklanır.</p>
+<hr />
+<h3 id="callsjson"><code>calls.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek (şifrelenmişse): <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>Calls</code> modülü tarafından oluşturulur. Modül, WhatsApp veya Skype gibi mesajlaşma uygulamalarından yapılanlar da dahil olmak üzere gelen ve giden aramaların kayıtlarını içeren <em>/private/var/mobile/Library/CallHistoryDB/CallHistory.storedata</em> konumundaki bir SQLite veritabanından kayıtları çıkarır.</p>
+<hr />
+<h3 id="chrome_faviconjson"><code>chrome_favicon.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>ChromeFavicon</code> modülü tarafından oluşturulur. Modül, favicon URL'leri ile bunları yükleyen ziyaret edilmiş URL'ler arasındaki eşlemeyi içeren <em>/private/var/mobile/Containers/Data/Application/*/Library/Application Support/Google/Chrome/Default/Favicons</em> konumundaki bir SQLite veritabanından kayıtları çıkarır.</p>
+<p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar hem favicon URL'sine hem de ziyaret edilen URL'ye karşı kontrol edilir. Eşleşmeler <em>chrome_favicon_detected.json</em> dosyasında saklanır.</p>
+<hr />
+<h3 id="chrome_historyjson"><code>chrome_history.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>ChromeHistory</code> modülü tarafından oluşturulur. Modül, URL ziyaretlerinin geçmişini içeren <em>/private/var/mobile/Containers/Data/Application/*/Library/Application Support/Google/Chrome/Default/History</em> konumundaki bir SQLite veritabanından kayıtları çıkarır.</p>
+<p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar ziyaret edilen URL'ye karşı kontrol edilir. Eşleşmeler <em>chrome_history_detected.json</em> dosyasında saklanır.</p>
+<hr />
+<h3 id="configuration_profilesjson"><code>configuration_profiles.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>ConfigurationProfiles</code> modülü tarafından oluşturulur. Modül, cihaza yüklenmiş iOS yapılandırma profillerine ilişkin ayrıntıları çıkarır. Bunlar hem varsayılan iOS profillerini hem de üçüncü taraf profillerini içermelidir.</p>
+<p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bilinen kötü amaçlı profilleri belirlemek amacıyla yapılandırma profili UUID'sine karşı kontrol edilir. Eşleşmeler <em>configuration_profiles_detected.json</em> dosyasında saklanır.</p>
+<hr />
+<h3 id="contactsjson"><code>contacts.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>Contacts</code> modülü tarafından oluşturulur. Modül, telefonun adres defterinin kayıtlarını içeren <em>/private/var/mobile/Library/AddressBook/AddressBook.sqlitedb</em> konumundaki bir SQLite veritabanından kayıtları çıkarır. Bu veritabanı elbette tek başına herhangi bir kötü amaçlı gösterge içermez; ancak diğer uygulamalardan (iMessage, SMS vb.) gelen kayıtları karşılaştırmak ve bilinmeyen kaynaklardan gelenleri filtrelemek için kullanmak isteyebilirsiniz.</p>
+<hr />
+<h3 id="firefox_faviconjson"><code>firefox_favicon.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>FirefoxFavicon</code> modülü tarafından oluşturulur. Modül, favicon URL'leri ile bunları yükleyen ziyaret edilmiş URL'ler arasındaki eşlemeyi içeren <em>/private/var/mobile/profile.profile/browser.db</em> konumundaki bir SQLite veritabanından kayıtları çıkarır.</p>
+<p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar hem favicon URL'sine hem de ziyaret edilen URL'ye karşı kontrol edilir. Eşleşmeler <em>firefox_favicon_detected.json</em> dosyasında saklanır.</p>
+<hr />
+<h3 id="firefox_historyjson"><code>firefox_history.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>FirefoxHistory</code> modülü tarafından oluşturulur. Modül, URL ziyaretlerinin geçmişini içeren <em>/private/var/mobile/profile.profile/browser.db</em> konumundaki bir SQLite veritabanından kayıtları çıkarır.</p>
+<p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar ziyaret edilen URL'ye karşı kontrol edilir. Eşleşmeler <em>firefox_history_detected.json</em> dosyasında saklanır.</p>
+<hr />
+<h3 id="global_preferencesjson"><code>global_preferences.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>GlobalPreferences</code> modülü tarafından oluşturulur. Modül, Lockdown Mode'un etkin olup olmadığı dahil olmak üzere sistem tercihlerini içeren <em>/private/var/mobile/Library/Preferences/.GlobalPreferences.plist</em> konumundaki bir Plist dosyasından kayıtları çıkarır.</p>
+<hr />
+<h3 id="id_status_cachejson"><code>id_status_cache.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek (iOS 14.7'den önce): <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>IDStatusCache</code> modülü tarafından oluşturulur. Modül, Apple kullanıcı kimliği doğrulamasının önbelleğini içeren <em>/private/var/mobile/Library/Preferences/com.apple.identityservices.idstatuscache.plist</em> konumundaki bir plist dosyasından kayıtları çıkarır. Bu önbellek, Facetime ve iMessage gibi uygulamaların diğer kayıtlı Apple kimlikleriyle ilk kez ne zaman iletişim kurduğunu gösterir. Bu önemlidir; çünkü bu uygulamaların sömürülmesinde rol oynayan kötü niyetli hesapların izlerini içerebilir.</p>
+<p>iOS 14.7.0'dan itibaren bu dosya boş ya da yoktur.</p>
+<hr />
+<h3 id="shortcutsjson"><code>shortcuts.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>Shortcuts</code> modülü tarafından oluşturulur. Modül, Shortcuts uygulamasına ilişkin kayıtları içeren <em>/private/var/mobile/Library/Shortcuts/Shortcuts.sqlite</em> konumundaki bir SQLite veritabanından kayıtları çıkarır. Shortcuts, kullanıcıların cihazlarında belirli eylemleri otomatikleştirmesine olanak tanıyan yerleşik bir iOS özelliğidir. Bazı durumlarda meşru Shortcuts uygulaması, casus yazılımlar tarafından enfekte edilmiş cihazlarda kalıcılık sağlamak amacıyla kötüye kullanılabilir.</p>
+<hr />
+<h3 id="interaction_cjson"><code>interaction_c.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek (şifrelenmişse): <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>InteractionC</code> modülü tarafından oluşturulur. Modül, kullanıcının yüklü uygulamalarla etkileşimlerine ilişkin ayrıntıları içeren <em>/private/var/mobile/Library/CoreDuet/People/interactionC.db</em> konumundaki bir SQLite veritabanından kayıtları çıkarır.</p>
+<hr />
+<h3 id="locationd_clientsjson"><code>locationd_clients.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>LocationdClients</code> modülü tarafından oluşturulur. Modül, konum servislerine erişim talep eden uygulamaların önbelleğini içeren <em>/private/var/mobile/Library/Caches/locationd/clients.plist</em> konumundaki bir plist dosyasından kayıtları çıkarır.</p>
+<hr />
+<h3 id="manifestjson"><code>manifest.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>Manifest</code> modülü tarafından oluşturulur. Modül, iTunes yedeklerinde bulunan ve yerel olarak yedeklenen dosyaları iOS cihazındaki orijinal yollarla eşleştiren <em>Manifest.db</em> SQLite veritabanından kayıtları çıkarır.</p>
+<p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar orijinal göreli yola karşı kontrol edilir. Bazı durumlarda, örneğin tarayıcı önbellek klasörlerinde olduğu gibi, adında alan adı bulunan dosya kayıtları olabilir. Eşleşmeler <em>manifest_detected.json</em> dosyasında saklanır.</p>
+<p>Eksik bir yedek, manifest dosyasında yine de edinemediği dosyaları listeler. Bu kayıtlar bir <code>"missing": true</code> alanı taşır ve modül bunlardan kaç tanesinin bulunduğunu bildirir. Bunu, bir artefaktın edinilememesi nedeniyle hiçbir sonuç döndürmeyen bir modülü, söz konusu artefakta hiç sahip olmamış bir cihazda hiçbir şey bulamayan bir modülden ayırt etmek için kullanın.</p>
+<p>Dosyalar, yedek klasörü içinde beklenen yollarında saklanmalıdır. Modül, yedek dosyalarını listelemeyi tamamlayamazsa bir uyarı kaydeder ve eksik dosya kontrolünü atlar; manifest üst verileri yine de çıkarılır.</p>
+<hr />
+<h3 id="os_analytics_ad_dailyjson"><code>os_analytics_ad_daily.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>OSAnalyticsADDaily</code> modülü tarafından oluşturulur. Modül, sistemde çalışan süreçlerin veri kullanım geçmişini içeren <em>private/var/mobile/Library/Preferences/com.apple.osanalytics.addaily.plist</em> konumundaki bir plist dosyasından kayıtları çıkarır. Ağ istatistiklerinin yanı sıra bu kayıtlar özellikle önemlidir; çünkü kötü amaçlı süreç yürütmelerine ve ilgili zaman aralığına dair izler gösterebilir.</p>
+<p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, süreç adlarına karşı kontrol edilir. Eşleşmeler <em>os_analytics_ad_daily_detected.json</em> dosyasında saklanır.</p>
+<hr />
+<h3 id="datausagejson"><code>datausage.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>Datausage</code> modülü tarafından oluşturulur. Modül, sistemde çalışan süreçlerin ağ verisi kullanım geçmişini içeren <em>/private/var/wireless/Library/Databases/DataUsage.sqlite</em> konumundaki bir SQLite veritabanından kayıtları çıkarır. WiFi üzerinden ağ trafiğini kaydetmez (<code>WIFI_IN</code> ve <code>WIFI_OUT</code> alanları her zaman boştur) ve <code>WWAN_IN</code> ile <code>WWAN_OUT</code> alanları bayt cinsinden saklanır. Ağ istatistiklerinin yanı sıra bu kayıtlar özellikle önemlidir; çünkü kötü amaçlı süreç yürütmelerine ve ilgili zaman aralığına dair izler gösterebilir. Özellikle geçerli bir bundle ID'ye sahip olmayan süreçler özel dikkat gerektirebilir.</p>
+<p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, süreç adlarına karşı kontrol edilir. Eşleşmeler <em>datausage_detected.json</em> dosyasında saklanır. Tam bir dosya sistemi dökümü üzerinde çalışılıyorsa ve komut satırından <code>--fast</code> bayrağı etkinleştirilmemişse, mvt-ios şüpheli görünen süreçleri vurgular ve dökümde aynı ada sahip bir ikili dosyanın bulunup bulunmadığını kontrol eder.</p>
+<hr />
+<h3 id="netusagejson"><code>netusage.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>Netusage</code> modülü tarafından oluşturulur. Modül, sistemde çalışan süreçlerin veri kullanım geçmişini içeren <em>/private/var/networkd/netusage.sqlite</em> konumundaki bir SQLite veritabanından kayıtları çıkarır. Ağ istatistiklerinin yanı sıra bu kayıtlar özellikle önemlidir; çünkü kötü amaçlı süreç yürütmelerine ve ilgili zaman aralığına dair izler gösterebilir. Özellikle geçerli bir bundle ID'ye sahip olmayan süreçler özel dikkat gerektirebilir.</p>
+<p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, süreç adlarına karşı kontrol edilir. Eşleşmeler <em>netusage_detected.json</em> dosyasında saklanır. Tam bir dosya sistemi dökümü üzerinde çalışılıyorsa ve komut satırından <code>--fast</code> bayrağı etkinleştirilmemişse, mvt-ios şüpheli görünen süreçleri vurgular ve dökümde aynı ada sahip bir ikili dosyanın bulunup bulunmadığını kontrol eder.</p>
+<hr />
+<h3 id="profile_eventsjson"><code>profile_events.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>ProfileEvents</code> modülü tarafından oluşturulur. Modül, yapılandırma profili işlemlerine ilişkin bir zaman çizelgesi çıkarır. Örneğin, Ayarlar uygulamasından yeni bir profilin ne zaman yüklendiğini veya bir profilin ne zaman kaldırıldığını göstermelidir.</p>
+<hr />
+<h3 id="safari_browser_statejson"><code>safari_browser_state.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek (şifrelenmişse): <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>SafariBrowserState</code> modülü tarafından oluşturulur. Modül, açılan sekmelerin kayıtlarını içeren <em>/private/var/mobile/Library/Safari/BrowserState.db</em> veya <em>/private/var/mobile/Containers/Data/Application/*/Library/Safari/BrowserState.db</em> konumundaki SQLite veritabanlarından kayıtları çıkarır.</p>
+<p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar ziyaret edilen URL'ye karşı kontrol edilir. Eşleşmeler <em>safari_browser_state_detected.json</em> dosyasında saklanır.</p>
+<hr />
+<h3 id="safari_faviconjson"><code>safari_favicon.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>SafariFavicon</code> modülü tarafından oluşturulur. Modül, favicon URL'leri ile bunları yükleyen ziyaret edilmiş URL'ler arasındaki eşlemeleri içeren <em>/private/var/mobile/Library/Image Cache/Favicons/Favicons.db</em> veya <em>/private/var/mobile/Containers/Data/Application/*/Library/Image Cache/Favicons/Favicons.db</em> konumundaki SQLite veritabanlarından kayıtları çıkarır.</p>
+<p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar hem favicon URL'sine hem de ziyaret edilen URL'ye karşı kontrol edilir. Eşleşmeler <em>safari_favicon_detected.json</em> dosyasında saklanır.</p>
+<hr />
+<h3 id="safari_historyjson"><code>safari_history.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek (şifrelenmişse): <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>SafariHistory</code> modülü tarafından oluşturulur. Modül, URL ziyaretlerinin geçmişini içeren <em>/private/var/mobile/Library/Safari/History.db</em> veya <em>/private/var/mobile/Containers/Data/Application/*/Library/Safari/History.db</em> konumundaki SQLite veritabanlarından kayıtları çıkarır.</p>
+<p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar ziyaret edilen URL'ye karşı kontrol edilir. Eşleşmeler <em>safari_history_detected.json</em> dosyasında saklanır.</p>
+<hr />
+<h3 id="shutdown_logjson"><code>shutdown_log.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek (şifrelenmişse): <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>ShutdownLog</code> modülü tarafından oluşturulur. Modül, <em>private/var/db/diagnostics/shutdown.log</em> konumundaki kapanma günlüğünden kayıtları çıkarır. Bir iPhone kapatılırken çalışan tüm süreçlere bir SIGTERM gönderilir. <code>shutdown.log</code> dosyası, SIGTERM gönderildikten sonra kapanmayan herhangi bir süreci (pid'i ve yoluyla birlikte) kaydeder.</p>
+<p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar yollara karşı kontrol edilir. Eşleşmeler <em>shutdown_log_detected.json</em> dosyasında saklanır.</p>
+<hr />
+<h3 id="smsjson"><code>sms.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>SMS</code> modülü tarafından oluşturulur. Modül, <em>/private/var/mobile/Library/SMS/sms.db</em> konumundaki SQLite veritabanından bir SMS mesajları listesi çıkarır.</p>
+<p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar çıkarılan HTTP bağlantılarına karşı kontrol edilir. Eşleşmeler <em>sms_detected.json</em> dosyasında saklanır.</p>
+<hr />
+<h3 id="urlsjson"><code>urls.json</code></h3>
+<p>Bu JSON dosyası, SMS, iMessage ve WhatsApp mesajlarından çıkarılan
+URL'leri toplar. Her girdi; orijinal URL'yi, ihlal göstergesi kontrolü
+sırasında MVT kısaltılmış bir URL'yi çözdüyse genişletilmiş hedefini,
+mesajın zaman damgasını ve <code>sms</code> ya da <code>whatsapp</code> kaynağını içerir.</p>
+<hr />
+<h3 id="sms_attachmentsjson"><code>sms_attachments.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>SMSAttachments</code> modülü tarafından oluşturulur. Modül, <code>SMS</code> modülünün kullandığı aynı veritabanından SMS veya iMessage yoluyla gönderilen ek dosyalara ilişkin ayrıntıları çıkarır. Bu kayıtlar, dosya biçimi ayrıştırıcılarındaki potansiyel güvenlik açıklarından veya Messages uygulamasının diğer dosya işleme biçimlerinden yararlanmaya yönelik sömürü girişimlerine işaret edebilecek benzersiz kalıpları belirtmek için yararlı olabilir.</p>
+<hr />
+<h3 id="tccjson"><code>tcc.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>TCC</code> modülü tarafından oluşturulur. Modül, hangi uygulamalara mikrofon, kamera veya konum gibi servislere erişim izni verildiğini ya da verilmediğini gösteren bir liste içeren <em>/private/var/mobile/Library/TCC/TCC.db</em> konumundaki bir SQLite veritabanından kayıtları çıkarır.</p>
+<hr />
+<h3 id="version_historyjson"><code>version_history.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>IOSVersionHistory</code> modülü tarafından oluşturulur. Modül, iOS yazılım güncellemelerine ilişkin kayıtları <em>/private/var/db/analyticsd/Analytics-Journal-*.ips</em> konumundaki analiz plist dosyalarından çıkarır.</p>
+<hr />
+<h3 id="webkit_indexeddbjson"><code>webkit_indexeddb.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>WebkitIndexedDB</code> modülü tarafından oluşturulur. Modül, cihazda yüklü herhangi bir uygulama tarafından oluşturulan IndexedDB dosyalarını içeren <em>/private/var/mobile/Containers/Data/Application/*/Library/WebKit/WebsiteData/IndexedDB</em> konumundaki dosya ve klasör adlarının bir listesini çıkarır.</p>
+<p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar çıkarılan adlara karşı kontrol edilir. Eşleşmeler <em>webkit_indexeddb_detected.json</em> dosyasında saklanır.</p>
+<hr />
+<h3 id="webkit_local_storagejson"><code>webkit_local_storage.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>WebkitLocalStorage</code> modülü tarafından oluşturulur. Modül, cihazda yüklü herhangi bir uygulama tarafından oluşturulan yerel depolama dosyalarını içeren <em>/private/var/mobile/Containers/Data/Application/*/Library/WebKit/WebsiteData/LocalStorage/</em> konumundaki dosya ve klasör adlarının bir listesini çıkarır.</p>
+<p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar çıkarılan adlara karşı kontrol edilir. Eşleşmeler <em>webkit_local_storage_detected.json</em> dosyasında saklanır.</p>
+<hr />
+<h3 id="webkit_resource_load_statisticsjson"><code>webkit_resource_load_statistics.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>WebkitResourceLoadStatistics</code> modülü tarafından oluşturulur. Modül, mevcut WebKit ResourceLoadStatistics <em>observations.db</em> SQLite3 veritabanlarından kayıtları çıkarır. Bu kayıtlar, uygulamaların iletişim kurduğu alan adlarını bir zaman damgasıyla birlikte göstermelidir.</p>
+<p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar çıkarılan alan adlarına karşı kontrol edilir. Eşleşmeler <em>webkit_resource_load_statistics_detected.json</em> dosyasında saklanır.</p>
+<hr />
+<h3 id="webkit_safari_view_servicejson"><code>webkit_safari_view_service.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>WebkitSafariViewService</code> modülü tarafından oluşturulur. Modül, SafariViewService tarafından önbelleğe alınan dosyaları içeren <em>/private/var/mobile/Containers/Data/Application/*/SystemData/com.apple.SafariViewService/Library/WebKit/WebsiteData/</em> konumundaki dosya ve klasör adlarının bir listesini çıkarır.</p>
+<p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar çıkarılan adlara karşı kontrol edilir. Eşleşmeler <em>webkit_safari_view_service_detected.json</em> dosyasında saklanır.</p>
+<hr />
+<h3 id="webkit_session_resource_logjson"><code>webkit_session_resource_log.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>WebkitSessionResourceLog</code> modülü tarafından oluşturulur. Modül, ziyaret edilen farklı alan adları tarafından yüklenen kaynakların kayıtlarını içeren <em>full_browsing_session_resourceLog.plist</em> adlı plist dosyalarından kayıtları çıkarır.</p>
+<p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar çıkarılan alan adlarına karşı kontrol edilir. Eşleşmeler <em>webkit_session_resource_log_detected.json</em> dosyasında saklanır.</p>
+<hr />
+<h3 id="whatsappjson"><code>whatsapp.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>WhatsApp</code> modülü tarafından oluşturulur. Modül, <em>private/var/mobile/Containers/Shared/AppGroup/*/ChatStorage.sqlite</em> konumundaki SQLite veritabanından bir WhatsApp mesajları listesi çıkarır; ayrıca her sohbet oturumu için, o konuşmanın ilk ve son etkileşim tarihlerini içeren bir kayıt (<code>"record_type": "chat_session"</code> ile işaretlenmiş) üretir. Sohbet oturumları <code>chat_first_message</code> ve <code>chat_last_message</code> zaman çizelgesi olaylarını üretir; grup sohbetleri ayrıca bir <code>group_created</code> olayı üretir. Sohbetteki en son mesajlar silinmişse, bir sohbet oturumunun son mesaj tarihi, saklanan en yeni mesajının tarihinden daha ileri olabilir.</p>
+<p>Güncel WhatsApp sürümleri, bire bir sohbet oturumlarını kişinin telefon numarası yerine opak bir LID tanımlayıcısıyla anahtarlar. Modül bunları, aynı uygulama grubundaki <em>LID.sqlite</em> veritabanındaki <code>ZWAPHONENUMBERLIDPAIR</code> tablosunu (veya bu tabloyu orada saklayan sürümlerde <em>ChatStorage.sqlite</em>'ın kendisini) kullanarak çözer; sohbet oturumu kayıtlarında <code>partner_resolved_phone_number</code> alanını doldurur ve zaman çizelgesi olaylarında telefon numarasını kullanır. Her LID-telefon numarası çifti de bir kayıt olarak (<code>"record_type": "lid_phone_number_pair"</code>) çıkarılır ve WhatsApp'ın bu ilişkiyi ne zaman öğrendiğini işaretleyen bir <code>lid_pair_recorded</code> zaman çizelgesi olayı üretir.</p>
+<p>İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar çıkarılan HTTP bağlantılarına karşı kontrol edilir. Eşleşmeler <em>whatsapp_detected.json</em> dosyasında saklanır.</p>
+<hr />
+<h3 id="whatsapp_contactsjson"><code>whatsapp_contacts.json</code></h3>
+<div class="admonition info">
+<p class="admonition-title">Kullanılabilirlik</p>
+<p>Yedek: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+Tam dosya sistemi dökümü: <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span></p>
+</div>
+<p>Bu JSON dosyası, mvt-ios'un <code>WhatsappContacts</code> modülü tarafından oluşturulur. Modül, <em>private/var/mobile/Containers/Shared/AppGroup/*/ContactsV2.sqlite</em> konumundaki SQLite veritabanından WhatsApp kişi kayıtlarını çıkarır; bunlar her kişinin telefon numarasını, WhatsApp ve LID tanımlayıcılarını ve <em>ChatStorage.sqlite</em> içinde kaydedilmeyen kişi başına kaybolan mesajlar zamanlayıcısını içerir. Bir kişi kaydında saklanan her zaman damgası bir zaman çizelgesi olayı üretir: <code>disappearing_mode_set</code> (kaybolan mesajlar zamanlayıcısının en son ne zaman değiştirildiği), <code>about_changed</code> (kişinin "about" metnini en son ne zaman değiştirdiği), <code>about_expiration</code> (süreli bir "about" metninin ne zaman sona ereceği) ve <code>contact_last_updated</code> (kişi kaydının en son ne zaman güncellendiği).</p>
+<p>Bu veritabanı artımlı yedeklerde sıklıkla eksiktir. Bulunamadığında modül bir uyarı kaydeder ve hiçbir sonuç üretmez; bu durumda sohbetlerin kaybolan mesajlar durumu yedekten belirlenemez.</p>
+<hr />
+<h2 id="check-sysdiagnose-ile-ckarlan-kaytlar"><code>check-sysdiagnose</code> ile Çıkarılan Kayıtlar</h2>
+<h3 id="sysdiagnose_infojson"><code>sysdiagnose_info.json</code></h3>
+<p>Bu JSON dosyası, mvt-ios'un <code>SysdiagnoseInfo</code> modülü tarafından oluşturulur. Modül, cihaza ve sysdiagnose'un kendisine ilişkin ayrıntıları çıkarır: remotectl döküm durumundan ve mobil etkinleştirme isteğinden product type ve model, iOS sürümü ve build, seri numarası, IMEI, MEID ve UDID; App Store daemon veritabanından Apple hesabının adı ve e-posta adresi (yeni iOS sürümlerinde artık bir sysdiagnose'un parçası değildir, eski arşivlerden hâlâ okunur) ve <em>sysdiagnose.log</em> dosyasından arşivin orijinal dosya adı ve oluşturulma zamanı.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2021-2023 MVT Project Developers | Gayriresmî Türkçe çeviri
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/mvt-project/mvt" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["tabs"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Kopyaland\u0131", "clipboard.copy": "Kopyala", "search.result.more.one": "Bu sayfada 1 tane daha", "search.result.more.other": "Bu sayfada # tane daha", "search.result.none": "E\u015fle\u015fen dok\u00fcman bulunamad\u0131", "search.result.one": "1 dok\u00fcman bulundu", "search.result.other": "# dok\u00fcman bulundu", "search.result.placeholder": "Aramaya ba\u015flamak i\u00e7in yaz\u0131n", "search.result.term.missing": "Eksik", "select.version": "Versiyon se\u00e7"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
