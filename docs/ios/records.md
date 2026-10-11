@@ -24,7 +24,7 @@ Bu JSON dosyası, mvt-ios'un `Analytics` modülü tarafından oluşturulur. Mod�
 
 Bu JSON dosyası, mvt-ios'un `Applications` modülü tarafından oluşturulur. Modül, cihazda yüklü uygulamaların listesini yedekteki `Info.plist` dosyasından veya bir dosya sistemi dökümündeki `iTunesMetadata.plist` dosyalarından çıkarır. Bu kayıtlar, uygulamanın kaynağına ve yüklenmesine ilişkin ayrıntılı bilgiler içerir.
 
-İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, süreçler ve uygulama kimlikleri her uygulamanın adına karşı kontrol edilir. Ayrıca AppStore'dan yüklenmemiş tüm uygulamalar işaretlenir. Eşleşmeler *applications_detected.json* dosyasında saklanır.
+İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, süreçler ve uygulama kimlikleri her uygulamanın adına karşı kontrol edilir. Ayrıca App Store'dan yüklenmemiş tüm uygulamalar işaretlenir. Eşleşmeler *applications_detected.json* dosyasında saklanır.
 
 ---
 
@@ -44,7 +44,7 @@ Bu JSON dosyası, mvt-ios'un `BackupInfo` modülü tarafından oluşturulur. Mod
     Yedek: :material-close:
     Tam dosya sistemi dökümü: :material-check:
 
-Bu JSON dosyası, mvt-ios'un `CacheFiles` modülü tarafından oluşturulur. Modül, diskte *Cache.db* adıyla saklanan tüm SQLite veritabanı dosyalarından kayıtları çıkarır. Bu veritabanları tipik olarak iOS'un [dahili URL önbelleklemesine](https://developer.apple.com/documentation/foundation/nsurlcache) ait verileri içerir. Bu modül aracılığıyla, aksi hâlde erişilemeyecek olan, uygulamalar ve sistem servisleri tarafından gerçekleştirilen HTTP isteklerine ve yanıtlarına ilişkin kayıtları kurtarabilirsiniz. Örneğin, bir iOS servisinin ilk aşama kötü amaçlı yükü indirmeye çalışırken gerçekleştirdiği bir sömürü zincirinin parçası olan HTTP isteklerini görebilirsiniz.
+Bu JSON dosyası, mvt-ios'un `CacheFiles` modülü tarafından oluşturulur. Modül, diskte *Cache.db* adıyla saklanan tüm SQLite veri tabanı dosyalarından kayıtları çıkarır. Bu veritabanları tipik olarak iOS'un [dahili URL önbelleklemesine](https://developer.apple.com/documentation/foundation/nsurlcache) ait verileri içerir. Bu modül aracılığıyla, aksi hâlde erişilemeyecek olan, uygulamalar ve sistem servisleri tarafından gerçekleştirilen HTTP isteklerine ve yanıtlarına ilişkin kayıtları kurtarabilirsiniz. Örneğin, bir iOS servisinin ilk aşama kötü amaçlı yükü indirmeye çalışırken gerçekleştirdiği bir sömürü zincirinin parçası olan HTTP isteklerini görebilirsiniz.
 
 İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar istenen URL'ye karşı kontrol edilir. Eşleşmeler *cache_files_detected.json* dosyasında saklanır.
 
@@ -56,7 +56,7 @@ Bu JSON dosyası, mvt-ios'un `CacheFiles` modülü tarafından oluşturulur. Mod
     Yedek: :material-check:
     Tam dosya sistemi dökümü: :material-check:
 
-Bu JSON dosyası, mvt-ios'un `Calendar` modülü tarafından oluşturulur. Bu modül, `Calendar.sqlitedb` veritabanındaki tüm CalendarItems öğelerini çıkarır. Bu veritabanı, telefonda yüklü farklı takvimlerdeki tüm takvim girdilerini içerir.
+Bu JSON dosyası, mvt-ios'un `Calendar` modülü tarafından oluşturulur. Bu modül, `Calendar.sqlitedb` veri tabanındaki tüm CalendarItems öğelerini çıkarır. Bu veri tabanı, telefonda yüklü farklı takvimlerdeki tüm takvim girdilerini içerir.
 
 İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, e-posta adresleri farklı etkinlikleri davet edenin e-posta adresine karşı kontrol edilir. Eşleşmeler *calendar_detected.json* dosyasında saklanır.
 
@@ -68,7 +68,7 @@ Bu JSON dosyası, mvt-ios'un `Calendar` modülü tarafından oluşturulur. Bu mo
     Yedek (şifrelenmişse): :material-check:
     Tam dosya sistemi dökümü: :material-check:
 
-Bu JSON dosyası, mvt-ios'un `Calls` modülü tarafından oluşturulur. Modül, WhatsApp veya Skype gibi mesajlaşma uygulamalarından yapılanlar da dahil olmak üzere gelen ve giden aramaların kayıtlarını içeren */private/var/mobile/Library/CallHistoryDB/CallHistory.storedata* konumundaki bir SQLite veritabanından kayıtları çıkarır.
+Bu JSON dosyası, mvt-ios'un `Calls` modülü tarafından oluşturulur. Modül, WhatsApp veya Skype gibi mesajlaşma uygulamalarından yapılanlar da dahil olmak üzere gelen ve giden aramaların kayıtlarını içeren */private/var/mobile/Library/CallHistoryDB/CallHistory.storedata* konumundaki bir SQLite veri tabanından kayıtları çıkarır.
 
 ---
 
@@ -78,7 +78,7 @@ Bu JSON dosyası, mvt-ios'un `Calls` modülü tarafından oluşturulur. Modül, 
     Yedek: :material-check:
     Tam dosya sistemi dökümü: :material-check:
 
-Bu JSON dosyası, mvt-ios'un `ChromeFavicon` modülü tarafından oluşturulur. Modül, favicon URL'leri ile bunları yükleyen ziyaret edilmiş URL'ler arasındaki eşlemeyi içeren */private/var/mobile/Containers/Data/Application/\*/Library/Application Support/Google/Chrome/Default/Favicons* konumundaki bir SQLite veritabanından kayıtları çıkarır.
+Bu JSON dosyası, mvt-ios'un `ChromeFavicon` modülü tarafından oluşturulur. Modül, favicon URL'leri ile bunları yükleyen ziyaret edilmiş URL'ler arasındaki eşlemeyi içeren */private/var/mobile/Containers/Data/Application/\*/Library/Application Support/Google/Chrome/Default/Favicons* konumundaki bir SQLite veri tabanından kayıtları çıkarır.
 
 İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar hem favicon URL'sine hem de ziyaret edilen URL'ye karşı kontrol edilir. Eşleşmeler *chrome_favicon_detected.json* dosyasında saklanır.
 
@@ -90,7 +90,7 @@ Bu JSON dosyası, mvt-ios'un `ChromeFavicon` modülü tarafından oluşturulur. 
     Yedek: :material-check:
     Tam dosya sistemi dökümü: :material-check:
 
-Bu JSON dosyası, mvt-ios'un `ChromeHistory` modülü tarafından oluşturulur. Modül, URL ziyaretlerinin geçmişini içeren */private/var/mobile/Containers/Data/Application/\*/Library/Application Support/Google/Chrome/Default/History* konumundaki bir SQLite veritabanından kayıtları çıkarır.
+Bu JSON dosyası, mvt-ios'un `ChromeHistory` modülü tarafından oluşturulur. Modül, URL ziyaretlerinin geçmişini içeren */private/var/mobile/Containers/Data/Application/\*/Library/Application Support/Google/Chrome/Default/History* konumundaki bir SQLite veri tabanından kayıtları çıkarır.
 
 İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar ziyaret edilen URL'ye karşı kontrol edilir. Eşleşmeler *chrome_history_detected.json* dosyasında saklanır.
 
@@ -114,7 +114,7 @@ Bu JSON dosyası, mvt-ios'un `ConfigurationProfiles` modülü tarafından oluşt
     Yedek: :material-check:
     Tam dosya sistemi dökümü: :material-check:
 
-Bu JSON dosyası, mvt-ios'un `Contacts` modülü tarafından oluşturulur. Modül, telefonun adres defterinin kayıtlarını içeren */private/var/mobile/Library/AddressBook/AddressBook.sqlitedb* konumundaki bir SQLite veritabanından kayıtları çıkarır. Bu veritabanı elbette tek başına herhangi bir kötü amaçlı gösterge içermez; ancak diğer uygulamalardan (iMessage, SMS vb.) gelen kayıtları karşılaştırmak ve bilinmeyen kaynaklardan gelenleri filtrelemek için kullanmak isteyebilirsiniz.
+Bu JSON dosyası, mvt-ios'un `Contacts` modülü tarafından oluşturulur. Modül, telefonun adres defterinin kayıtlarını içeren */private/var/mobile/Library/AddressBook/AddressBook.sqlitedb* konumundaki bir SQLite veri tabanından kayıtları çıkarır. Bu veri tabanı elbette tek başına herhangi bir kötü amaçlı gösterge içermez; ancak diğer uygulamalardan (iMessage, SMS vb.) gelen kayıtları karşılaştırmak ve bilinmeyen kaynaklardan gelenleri filtrelemek için kullanmak isteyebilirsiniz.
 
 ---
 
@@ -124,7 +124,7 @@ Bu JSON dosyası, mvt-ios'un `Contacts` modülü tarafından oluşturulur. Modü
     Yedek: :material-check:
     Tam dosya sistemi dökümü: :material-check:
 
-Bu JSON dosyası, mvt-ios'un `FirefoxFavicon` modülü tarafından oluşturulur. Modül, favicon URL'leri ile bunları yükleyen ziyaret edilmiş URL'ler arasındaki eşlemeyi içeren */private/var/mobile/profile.profile/browser.db* konumundaki bir SQLite veritabanından kayıtları çıkarır.
+Bu JSON dosyası, mvt-ios'un `FirefoxFavicon` modülü tarafından oluşturulur. Modül, favicon URL'leri ile bunları yükleyen ziyaret edilmiş URL'ler arasındaki eşlemeyi içeren */private/var/mobile/profile.profile/browser.db* konumundaki bir SQLite veri tabanından kayıtları çıkarır.
 
 İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar hem favicon URL'sine hem de ziyaret edilen URL'ye karşı kontrol edilir. Eşleşmeler *firefox_favicon_detected.json* dosyasında saklanır.
 
@@ -136,7 +136,7 @@ Bu JSON dosyası, mvt-ios'un `FirefoxFavicon` modülü tarafından oluşturulur.
     Yedek: :material-check:
     Tam dosya sistemi dökümü: :material-check:
 
-Bu JSON dosyası, mvt-ios'un `FirefoxHistory` modülü tarafından oluşturulur. Modül, URL ziyaretlerinin geçmişini içeren */private/var/mobile/profile.profile/browser.db* konumundaki bir SQLite veritabanından kayıtları çıkarır.
+Bu JSON dosyası, mvt-ios'un `FirefoxHistory` modülü tarafından oluşturulur. Modül, URL ziyaretlerinin geçmişini içeren */private/var/mobile/profile.profile/browser.db* konumundaki bir SQLite veri tabanından kayıtları çıkarır.
 
 İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar ziyaret edilen URL'ye karşı kontrol edilir. Eşleşmeler *firefox_history_detected.json* dosyasında saklanır.
 
@@ -170,7 +170,7 @@ iOS 14.7.0'dan itibaren bu dosya boş ya da yoktur.
     Yedek: :material-check:
     Tam dosya sistemi dökümü: :material-check:
 
-Bu JSON dosyası, mvt-ios'un `Shortcuts` modülü tarafından oluşturulur. Modül, Shortcuts uygulamasına ilişkin kayıtları içeren */private/var/mobile/Library/Shortcuts/Shortcuts.sqlite* konumundaki bir SQLite veritabanından kayıtları çıkarır. Shortcuts, kullanıcıların cihazlarında belirli eylemleri otomatikleştirmesine olanak tanıyan yerleşik bir iOS özelliğidir. Bazı durumlarda meşru Shortcuts uygulaması, casus yazılımlar tarafından enfekte edilmiş cihazlarda kalıcılık sağlamak amacıyla kötüye kullanılabilir.
+Bu JSON dosyası, mvt-ios'un `Shortcuts` modülü tarafından oluşturulur. Modül, Shortcuts uygulamasına ilişkin kayıtları içeren */private/var/mobile/Library/Shortcuts/Shortcuts.sqlite* konumundaki bir SQLite veri tabanından kayıtları çıkarır. Shortcuts, kullanıcıların cihazlarında belirli eylemleri otomatikleştirmesine olanak tanıyan yerleşik bir iOS özelliğidir. Bazı durumlarda meşru Shortcuts uygulaması, casus yazılımlar tarafından enfekte edilmiş cihazlarda kalıcılık sağlamak amacıyla kötüye kullanılabilir.
 
 ---
 
@@ -180,7 +180,7 @@ Bu JSON dosyası, mvt-ios'un `Shortcuts` modülü tarafından oluşturulur. Mod�
     Yedek (şifrelenmişse): :material-check:
     Tam dosya sistemi dökümü: :material-check:
 
-Bu JSON dosyası, mvt-ios'un `InteractionC` modülü tarafından oluşturulur. Modül, kullanıcının yüklü uygulamalarla etkileşimlerine ilişkin ayrıntıları içeren */private/var/mobile/Library/CoreDuet/People/interactionC.db* konumundaki bir SQLite veritabanından kayıtları çıkarır.
+Bu JSON dosyası, mvt-ios'un `InteractionC` modülü tarafından oluşturulur. Modül, kullanıcının yüklü uygulamalarla etkileşimlerine ilişkin ayrıntıları içeren */private/var/mobile/Library/CoreDuet/People/interactionC.db* konumundaki bir SQLite veri tabanından kayıtları çıkarır.
 
 ---
 
@@ -200,7 +200,7 @@ Bu JSON dosyası, mvt-ios'un `LocationdClients` modülü tarafından oluşturulu
     Yedek: :material-check:
     Tam dosya sistemi dökümü: :material-close:
 
-Bu JSON dosyası, mvt-ios'un `Manifest` modülü tarafından oluşturulur. Modül, iTunes yedeklerinde bulunan ve yerel olarak yedeklenen dosyaları iOS cihazındaki orijinal yollarla eşleştiren *Manifest.db* SQLite veritabanından kayıtları çıkarır.
+Bu JSON dosyası, mvt-ios'un `Manifest` modülü tarafından oluşturulur. Modül, iTunes yedeklerinde bulunan ve yerel olarak yedeklenen dosyaları iOS cihazındaki orijinal yollarla eşleştiren *Manifest.db* SQLite veri tabanından kayıtları çıkarır.
 
 İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar orijinal göreli yola karşı kontrol edilir. Bazı durumlarda, örneğin tarayıcı önbellek klasörlerinde olduğu gibi, adında alan adı bulunan dosya kayıtları olabilir. Eşleşmeler *manifest_detected.json* dosyasında saklanır.
 
@@ -228,7 +228,7 @@ Bu JSON dosyası, mvt-ios'un `OSAnalyticsADDaily` modülü tarafından oluşturu
     Yedek: :material-check:
     Tam dosya sistemi dökümü: :material-check:
 
-Bu JSON dosyası, mvt-ios'un `Datausage` modülü tarafından oluşturulur. Modül, sistemde çalışan süreçlerin ağ verisi kullanım geçmişini içeren */private/var/wireless/Library/Databases/DataUsage.sqlite* konumundaki bir SQLite veritabanından kayıtları çıkarır. WiFi üzerinden ağ trafiğini kaydetmez (`WIFI_IN` ve `WIFI_OUT` alanları her zaman boştur) ve `WWAN_IN` ile `WWAN_OUT` alanları bayt cinsinden saklanır. Ağ istatistiklerinin yanı sıra bu kayıtlar özellikle önemlidir; çünkü kötü amaçlı süreç yürütmelerine ve ilgili zaman aralığına dair izler gösterebilir. Özellikle geçerli bir bundle ID'ye sahip olmayan süreçler özel dikkat gerektirebilir.
+Bu JSON dosyası, mvt-ios'un `Datausage` modülü tarafından oluşturulur. Modül, sistemde çalışan süreçlerin ağ verisi kullanım geçmişini içeren */private/var/wireless/Library/Databases/DataUsage.sqlite* konumundaki bir SQLite veri tabanından kayıtları çıkarır. WiFi üzerinden ağ trafiğini kaydetmez (`WIFI_IN` ve `WIFI_OUT` alanları her zaman boştur) ve `WWAN_IN` ile `WWAN_OUT` alanları bayt cinsinden saklanır. Ağ istatistiklerinin yanı sıra bu kayıtlar özellikle önemlidir; çünkü kötü amaçlı süreç yürütmelerine ve ilgili zaman aralığına dair izler gösterebilir. Özellikle geçerli bir bundle ID'ye sahip olmayan süreçler özel dikkat gerektirebilir.
 
 İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, süreç adlarına karşı kontrol edilir. Eşleşmeler *datausage_detected.json* dosyasında saklanır. Tam bir dosya sistemi dökümü üzerinde çalışılıyorsa ve komut satırından `--fast` bayrağı etkinleştirilmemişse, mvt-ios şüpheli görünen süreçleri vurgular ve dökümde aynı ada sahip bir ikili dosyanın bulunup bulunmadığını kontrol eder.
 
@@ -240,7 +240,7 @@ Bu JSON dosyası, mvt-ios'un `Datausage` modülü tarafından oluşturulur. Mod�
     Yedek: :material-close:
     Tam dosya sistemi dökümü: :material-check:
 
-Bu JSON dosyası, mvt-ios'un `Netusage` modülü tarafından oluşturulur. Modül, sistemde çalışan süreçlerin veri kullanım geçmişini içeren */private/var/networkd/netusage.sqlite* konumundaki bir SQLite veritabanından kayıtları çıkarır. Ağ istatistiklerinin yanı sıra bu kayıtlar özellikle önemlidir; çünkü kötü amaçlı süreç yürütmelerine ve ilgili zaman aralığına dair izler gösterebilir. Özellikle geçerli bir bundle ID'ye sahip olmayan süreçler özel dikkat gerektirebilir.
+Bu JSON dosyası, mvt-ios'un `Netusage` modülü tarafından oluşturulur. Modül, sistemde çalışan süreçlerin veri kullanım geçmişini içeren */private/var/networkd/netusage.sqlite* konumundaki bir SQLite veri tabanından kayıtları çıkarır. Ağ istatistiklerinin yanı sıra bu kayıtlar özellikle önemlidir; çünkü kötü amaçlı süreç yürütmelerine ve ilgili zaman aralığına dair izler gösterebilir. Özellikle geçerli bir bundle ID'ye sahip olmayan süreçler özel dikkat gerektirebilir.
 
 İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, süreç adlarına karşı kontrol edilir. Eşleşmeler *netusage_detected.json* dosyasında saklanır. Tam bir dosya sistemi dökümü üzerinde çalışılıyorsa ve komut satırından `--fast` bayrağı etkinleştirilmemişse, mvt-ios şüpheli görünen süreçleri vurgular ve dökümde aynı ada sahip bir ikili dosyanın bulunup bulunmadığını kontrol eder.
 
@@ -310,7 +310,7 @@ Bu JSON dosyası, mvt-ios'un `ShutdownLog` modülü tarafından oluşturulur. Mo
     Yedek: :material-check:
     Tam dosya sistemi dökümü: :material-check:
 
-Bu JSON dosyası, mvt-ios'un `SMS` modülü tarafından oluşturulur. Modül, */private/var/mobile/Library/SMS/sms.db* konumundaki SQLite veritabanından bir SMS mesajları listesi çıkarır.
+Bu JSON dosyası, mvt-ios'un `SMS` modülü tarafından oluşturulur. Modül, */private/var/mobile/Library/SMS/sms.db* konumundaki SQLite veri tabanından bir SMS mesajları listesi çıkarır.
 
 İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar çıkarılan HTTP bağlantılarına karşı kontrol edilir. Eşleşmeler *sms_detected.json* dosyasında saklanır.
 
@@ -331,7 +331,7 @@ mesajın zaman damgasını ve `sms` ya da `whatsapp` kaynağını içerir.
     Yedek: :material-check:
     Tam dosya sistemi dökümü: :material-check:
 
-Bu JSON dosyası, mvt-ios'un `SMSAttachments` modülü tarafından oluşturulur. Modül, `SMS` modülünün kullandığı aynı veritabanından SMS veya iMessage yoluyla gönderilen ek dosyalara ilişkin ayrıntıları çıkarır. Bu kayıtlar, dosya biçimi ayrıştırıcılarındaki potansiyel güvenlik açıklarından veya Messages uygulamasının diğer dosya işleme biçimlerinden yararlanmaya yönelik sömürü girişimlerine işaret edebilecek benzersiz kalıpları belirtmek için yararlı olabilir.
+Bu JSON dosyası, mvt-ios'un `SMSAttachments` modülü tarafından oluşturulur. Modül, `SMS` modülünün kullandığı aynı veri tabanından SMS veya iMessage yoluyla gönderilen ek dosyalara ilişkin ayrıntıları çıkarır. Bu kayıtlar, dosya biçimi ayrıştırıcılarındaki potansiyel güvenlik açıklarından veya Messages uygulamasının diğer dosya işleme biçimlerinden yararlanmaya yönelik sömürü girişimlerine işaret edebilecek benzersiz kalıpları belirtmek için yararlı olabilir.
 
 ---
 
@@ -341,7 +341,7 @@ Bu JSON dosyası, mvt-ios'un `SMSAttachments` modülü tarafından oluşturulur.
     Yedek: :material-check:
     Tam dosya sistemi dökümü: :material-check:
 
-Bu JSON dosyası, mvt-ios'un `TCC` modülü tarafından oluşturulur. Modül, hangi uygulamalara mikrofon, kamera veya konum gibi servislere erişim izni verildiğini ya da verilmediğini gösteren bir liste içeren */private/var/mobile/Library/TCC/TCC.db* konumundaki bir SQLite veritabanından kayıtları çıkarır.
+Bu JSON dosyası, mvt-ios'un `TCC` modülü tarafından oluşturulur. Modül, hangi uygulamalara mikrofon, kamera veya konum gibi servislere erişim izni verildiğini ya da verilmediğini gösteren bir liste içeren */private/var/mobile/Library/TCC/TCC.db* konumundaki bir SQLite veri tabanından kayıtları çıkarır.
 
 ---
 
@@ -421,9 +421,9 @@ Bu JSON dosyası, mvt-ios'un `WebkitSessionResourceLog` modülü tarafından olu
     Yedek: :material-check:
     Tam dosya sistemi dökümü: :material-check:
 
-Bu JSON dosyası, mvt-ios'un `WhatsApp` modülü tarafından oluşturulur. Modül, *private/var/mobile/Containers/Shared/AppGroup/\*/ChatStorage.sqlite* konumundaki SQLite veritabanından bir WhatsApp mesajları listesi çıkarır; ayrıca her sohbet oturumu için, o konuşmanın ilk ve son etkileşim tarihlerini içeren bir kayıt (`"record_type": "chat_session"` ile işaretlenmiş) üretir. Sohbet oturumları `chat_first_message` ve `chat_last_message` zaman çizelgesi olaylarını üretir; grup sohbetleri ayrıca bir `group_created` olayı üretir. Sohbetteki en son mesajlar silinmişse, bir sohbet oturumunun son mesaj tarihi, saklanan en yeni mesajının tarihinden daha ileri olabilir.
+Bu JSON dosyası, mvt-ios'un `WhatsApp` modülü tarafından oluşturulur. Modül, *private/var/mobile/Containers/Shared/AppGroup/\*/ChatStorage.sqlite* konumundaki SQLite veri tabanından bir WhatsApp mesajları listesi çıkarır; ayrıca her sohbet oturumu için, o konuşmanın ilk ve son etkileşim tarihlerini içeren bir kayıt (`"record_type": "chat_session"` ile işaretlenmiş) üretir. Sohbet oturumları `chat_first_message` ve `chat_last_message` zaman çizelgesi olaylarını üretir; grup sohbetleri ayrıca bir `group_created` olayı üretir. Sohbetteki en son mesajlar silinmişse, bir sohbet oturumunun son mesaj tarihi, saklanan en yeni mesajının tarihinden daha ileri olabilir.
 
-Güncel WhatsApp sürümleri, bire bir sohbet oturumlarını kişinin telefon numarası yerine opak bir LID tanımlayıcısıyla anahtarlar. Modül bunları, aynı uygulama grubundaki *LID.sqlite* veritabanındaki `ZWAPHONENUMBERLIDPAIR` tablosunu (veya bu tabloyu orada saklayan sürümlerde *ChatStorage.sqlite*'ın kendisini) kullanarak çözer; sohbet oturumu kayıtlarında `partner_resolved_phone_number` alanını doldurur ve zaman çizelgesi olaylarında telefon numarasını kullanır. Her LID-telefon numarası çifti de bir kayıt olarak (`"record_type": "lid_phone_number_pair"`) çıkarılır ve WhatsApp'ın bu ilişkiyi ne zaman öğrendiğini işaretleyen bir `lid_pair_recorded` zaman çizelgesi olayı üretir.
+Güncel WhatsApp sürümleri, bire bir sohbet oturumlarını kişinin telefon numarası yerine opak bir LID tanımlayıcısıyla anahtarlar. Modül bunları, aynı uygulama grubundaki *LID.sqlite* veri tabanındaki `ZWAPHONENUMBERLIDPAIR` tablosunu (veya bu tabloyu orada saklayan sürümlerde *ChatStorage.sqlite*'ın kendisini) kullanarak çözer; sohbet oturumu kayıtlarında `partner_resolved_phone_number` alanını doldurur ve zaman çizelgesi olaylarında telefon numarasını kullanır. Her LID-telefon numarası çifti de bir kayıt olarak (`"record_type": "lid_phone_number_pair"`) çıkarılır ve WhatsApp'ın bu ilişkiyi ne zaman öğrendiğini işaretleyen bir `lid_pair_recorded` zaman çizelgesi olayı üretir.
 
 İhlal göstergeleri komut satırı aracılığıyla sağlanırsa, bunlar çıkarılan HTTP bağlantılarına karşı kontrol edilir. Eşleşmeler *whatsapp_detected.json* dosyasında saklanır.
 
@@ -435,9 +435,9 @@ Güncel WhatsApp sürümleri, bire bir sohbet oturumlarını kişinin telefon nu
     Yedek: :material-check:
     Tam dosya sistemi dökümü: :material-check:
 
-Bu JSON dosyası, mvt-ios'un `WhatsappContacts` modülü tarafından oluşturulur. Modül, *private/var/mobile/Containers/Shared/AppGroup/\*/ContactsV2.sqlite* konumundaki SQLite veritabanından WhatsApp kişi kayıtlarını çıkarır; bunlar her kişinin telefon numarasını, WhatsApp ve LID tanımlayıcılarını ve *ChatStorage.sqlite* içinde kaydedilmeyen kişi başına kaybolan mesajlar zamanlayıcısını içerir. Bir kişi kaydında saklanan her zaman damgası bir zaman çizelgesi olayı üretir: `disappearing_mode_set` (kaybolan mesajlar zamanlayıcısının en son ne zaman değiştirildiği), `about_changed` (kişinin "about" metnini en son ne zaman değiştirdiği), `about_expiration` (süreli bir "about" metninin ne zaman sona ereceği) ve `contact_last_updated` (kişi kaydının en son ne zaman güncellendiği).
+Bu JSON dosyası, mvt-ios'un `WhatsappContacts` modülü tarafından oluşturulur. Modül, *private/var/mobile/Containers/Shared/AppGroup/\*/ContactsV2.sqlite* konumundaki SQLite veri tabanından WhatsApp kişi kayıtlarını çıkarır; bunlar her kişinin telefon numarasını, WhatsApp ve LID tanımlayıcılarını ve *ChatStorage.sqlite* içinde kaydedilmeyen kişi başına kaybolan mesajlar zamanlayıcısını içerir. Bir kişi kaydında saklanan her zaman damgası bir zaman çizelgesi olayı üretir: `disappearing_mode_set` (kaybolan mesajlar zamanlayıcısının en son ne zaman değiştirildiği), `about_changed` (kişinin "about" metnini en son ne zaman değiştirdiği), `about_expiration` (süreli bir "about" metninin ne zaman sona ereceği) ve `contact_last_updated` (kişi kaydının en son ne zaman güncellendiği).
 
-Bu veritabanı artımlı yedeklerde sıklıkla eksiktir. Bulunamadığında modül bir uyarı kaydeder ve hiçbir sonuç üretmez; bu durumda sohbetlerin kaybolan mesajlar durumu yedekten belirlenemez.
+Bu veri tabanı artımlı yedeklerde sıklıkla eksiktir. Bulunamadığında modül bir uyarı kaydeder ve hiçbir sonuç üretmez; bu durumda sohbetlerin kaybolan mesajlar durumu yedekten belirlenemez.
 
 
 ---
@@ -446,4 +446,4 @@ Bu veritabanı artımlı yedeklerde sıklıkla eksiktir. Bulunamadığında mod�
 
 ### `sysdiagnose_info.json` {#sysdiagnose_infojson}
 
-Bu JSON dosyası, mvt-ios'un `SysdiagnoseInfo` modülü tarafından oluşturulur. Modül, cihaza ve sysdiagnose'un kendisine ilişkin ayrıntıları çıkarır: remotectl döküm durumundan ve mobil etkinleştirme isteğinden product type ve model, iOS sürümü ve build, seri numarası, IMEI, MEID ve UDID; App Store daemon veritabanından Apple hesabının adı ve e-posta adresi (yeni iOS sürümlerinde artık bir sysdiagnose'un parçası değildir, eski arşivlerden hâlâ okunur) ve *sysdiagnose.log* dosyasından arşivin orijinal dosya adı ve oluşturulma zamanı.
+Bu JSON dosyası, mvt-ios'un `SysdiagnoseInfo` modülü tarafından oluşturulur. Modül, cihaza ve sysdiagnose'un kendisine ilişkin ayrıntıları çıkarır: remotectl döküm durumundan ve mobil etkinleştirme isteğinden product type ve model, iOS sürümü ve build, seri numarası, IMEI, MEID ve UDID; App Store daemon veri tabanından Apple hesabının adı ve e-posta adresi (yeni iOS sürümlerinde artık bir sysdiagnose'un parçası değildir, eski arşivlerden hâlâ okunur) ve *sysdiagnose.log* dosyasından arşivin orijinal dosya adı ve oluşturulma zamanı.

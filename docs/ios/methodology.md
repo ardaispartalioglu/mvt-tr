@@ -12,4 +12,4 @@ Telefonu iade etmeniz beklenmiyorsa, yedek alma dahil diğer tüm seçenekleri t
 
 #### iTunes Yedeği
 
-Alternatif bir seçenek, bir iTunes yedeği oluşturmaktır (macOS'un en güncel sürümlerinde bunlar artık iTunes'dan değil, doğrudan Finder'dan başlatılır). Yedekler cihazda saklanan dosyaların yalnızca bir alt kümesini sağlasa da, çoğu durumda en azından bazı şüpheli artefaktları tespit etmek için yeterli olabilir. Parolayla şifrelenmiş yedeklerde, şifrelenmemiş yedeklerde bulunmayan bazı ek ilginç kayıtlar bulunur; örneğin Safari geçmişi, Safari durumu vb.
+Alternatif bir seçenek, bir iTunes yedeği oluşturmaktır (macOS'in en güncel sürümlerinde bunlar artık iTunes'dan değil, doğrudan Finder'dan başlatılır). Yedekler cihazda saklanan dosyaların yalnızca bir alt kümesini sağlasa da, çoğu durumda en azından bazı şüpheli artefaktları tespit etmek için yeterli olabilir. Parolayla şifrelenmiş yedeklerde, şifrelenmemiş yedeklerde bulunmayan bazı ek ilginç kayıtlar bulunur; örneğin Safari geçmişi, Safari durumu vb.

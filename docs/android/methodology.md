@@ -2,7 +2,7 @@
 
 Ne yazık ki Android cihazlar, iOS muadillerine kıyasla adli açıdan kullanışlı daha az sayıda eksiksiz veri kaynağı sunar. iOS'un aksine, Android yedekleme özelliği yalnızca sınırlı miktarda ilgili veri sağlar.
 
-*bugreport dosyaları* gibi Android tanılama günlükleri, farklı Android sürümleri ve cihaz üreticileri arasında biçim ve yapı bakımından tutarsız olabilir. Mevcut sınırlı tanılama bilgisi, olası ele geçirilmelerin ön değerlendirmesini zorlaştırır ve bu nedenle `mvt-android` yetenekleri de sınırlıdır.
+*bugreport dosyaları* gibi Android tanılama günlükleri, farklı Android sürümleri ve cihaz üreticileri arasında biçim ve yapı bakımından tutarsız olabilir. Mevcut sınırlı tanılama bilgisi, olası ele geçirilmelerin triyajını zorlaştırır ve bu nedenle `mvt-android` yetenekleri de sınırlıdır.
 
 Ancak her şey kaybedilmiş değil.
 

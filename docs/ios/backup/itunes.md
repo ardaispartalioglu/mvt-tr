@@ -4,7 +4,7 @@ Windows veya macOS bilgisayarlarda iTunes kullanarak iPhone yedeği almak mümk�
 
 Bunu yapmak için:
 
-1. iTunes'in kurulu olduğundan emin olun.
+1. iTunes'un kurulu olduğundan emin olun.
 2. iPhone'unuzu bir Lightning/USB kablosu kullanarak bilgisayarınıza bağlayın.
 3. Cihazı iTunes'da (veya macOS'te Finder'da) açın.
 4. Daha doğru bir tespit elde etmek istiyorsanız, şifreli yedekleme seçeneğinin etkinleştirildiğinden emin olun ve yedek için güvenli bir parola seçin.

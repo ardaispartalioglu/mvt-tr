@@ -18,6 +18,11 @@
   verisi işlenen kişinin **rızasıyla** ("consensual use") kullanılabilir.
 - Teknik terimler (MVT, mvt-ios, sysdiagnose, STIX2 vb.) tutarlılık amacıyla özgün hâliyle bırakılmıştır.
 
+## Çeviri Kalitesi
+
+- Terimler TDK Güncel Türkçe Sözlük (sozluk.gov.tr) üzerinden denetlendi; sözlükte bulunmayan alan terimlerinde (artefakt, triyaj, önbellek vb.) Türkçe DFIR/sektör kullanımı esas alındı.
+- Ek uyumu: marka adlarında Apple Türkçe kaynaklarıyla tutarlı kullanım (macOS'te, iTunes'da), ünsüz benzeşmesi (Windows'ta, git'teki) ve tutarlı kesme işareti kuralları gözetildi.
+
 ## Katkı
 
 Düzeltme ve iyileştirme PR'ları memnuniyetle karşılanır:

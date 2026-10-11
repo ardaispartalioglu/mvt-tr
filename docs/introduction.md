@@ -3,7 +3,7 @@
 Mobile Verification Toolkit (MVT), iOS ve Android cihazlarda herhangi bir ihlal belirtisi olup olmadığını tespit etmek amacıyla bu cihazların rıza temelli adli edinimini kolaylaştırmak için tasarlanmış bir araç setidir. MVT'nin yetenekleri sürekli gelişmektedir; ancak başlıca özelliklerinden bazıları şunlardır:
 
 - Şifrelenmiş iOS yedeklerinin şifresini çözme.
-- Çok sayıda iOS sistem ve uygulama veritabanından, günlükten (log) ve sistem analitiğinden kayıtları işleme ve ayrıştırma.
+- Çok sayıda iOS sistem ve uygulama veri tabanından, günlükten (log) ve sistem analitiğinden kayıtları işleme ve ayrıştırma.
 - Android cihazlardan kurulu uygulamaları çıkarma.
 - adb protokolü üzerinden Android cihazlardan tanılama bilgileri çıkarma.
 - Çıkarılan kayıtları, STIX2 biçiminde sağlanan bir kötü amaçlı gösterge listesiyle karşılaştırma.

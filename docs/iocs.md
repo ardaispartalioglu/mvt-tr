@@ -36,7 +36,7 @@ export MVT_STIX2="/home/user/IOC1.stix2:/home/user/IOC2.stix2"
 
 ## Ağ Erişimi
 
-URL göstergelerini kontrol ederken MVT, tanınan kısaltılmış URL'leri bir HTTP `HEAD` isteğiyle takip eder. URL kontrollerinin yinelenenleri ayıklanır ve eşzamanlı olarak yürütülür; aynı anda en fazla 20 istek ilerlemede olur. Tek bir URL zinciri içindeki yönlendirmeler ise yine sıralı olarak takip edilir. Bu istekleri aşağıdaki ortam değişkenleri kontrol eder:
+URL göstergelerini kontrol ederken MVT, tanınan kısaltılmış URL'leri bir HTTP `HEAD` isteğiyle takip eder. URL kontrollerinin yinelenenleri ayıklanır ve eş zamanlı olarak yürütülür; aynı anda en fazla 20 istek ilerlemede olur. Tek bir URL zinciri içindeki yönlendirmeler ise yine sıralı olarak takip edilir. Bu istekleri aşağıdaki ortam değişkenleri kontrol eder:
 
 - `MVT_NETWORK_ACCESS_ALLOWED` ağ isteklerini etkinleştirir veya devre dışı bırakır. Varsayılan değeri `true`'dur. MVT'nin kısaltılmış URL'leri çözümlemeye çalışmasını önlemek için `false` olarak ayarlayın.
 - `MVT_NETWORK_TIMEOUT` istek zaman aşımını saniye cinsinden ayarlar. Varsayılan değeri `15`'tir.

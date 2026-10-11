@@ -45,7 +45,7 @@ $ mvt-android check-backup --backup-password "password123" --output /path/to/res
 
 ## Yedeği açmak ve kontrol etmek için alternatif yollar
 
-Yedeğin analizi sırasında bir sorunla karşılaşırsanız, alternatif olarak yedeği okunabilir bir dosya biçimine dönüştürmek için [Android Backup Extractor (ABE)](https://github.com/nelenkov/android-backup-extractor) kullanabilirsiniz. Sisteminizde java'nın kurulu olduğundan emin olun ve aşağıdaki komutu kullanın:
+Yedeğin analizi sırasında bir sorunla karşılaşırsanız, alternatif olarak yedeği okunabilir bir dosya biçimine dönüştürmek için [Android Backup Extractor (ABE)](https://github.com/nelenkov/android-backup-extractor) kullanabilirsiniz. Sisteminizde Java'nın kurulu olduğundan emin olun ve aşağıdaki komutu kullanın:
 
 ```bash
 java -jar ~/path/to/abe.jar unpack backup.ab backup.tar

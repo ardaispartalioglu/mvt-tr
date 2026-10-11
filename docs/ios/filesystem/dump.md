@@ -1,6 +1,6 @@
 # Dosya Sistemi Dökümü Alma
 
-iTunes yedeği çok sayıda faydalı veritabanı ve tanılama verisi sağlasa da, bazı durumlarda cihaza jailbreak yapıp tam bir dosya sistemi dökümü almak isteyebilirsiniz. Bu durumda, çoğu yeni iPhone modelinde root elde etmenin kolay bir yolunu sunan [checkra1n](https://checkra.in/) aracına göz atmalısınız.
+iTunes yedeği çok sayıda faydalı veri tabanı ve tanılama verisi sağlasa da, bazı durumlarda cihaza jailbreak yapıp tam bir dosya sistemi dökümü almak isteyebilirsiniz. Bu durumda, çoğu yeni iPhone modelinde root elde etmenin kolay bir yolunu sunan [checkra1n](https://checkra.in/) aracına göz atmalısınız.
 
 !!! warning
     Herhangi bir cihaza checkra1n uygulamadan önce tam bir yedek aldığınızdan ve cihazı geri yüklemeden önce tam bir fabrika ayarlarına sıfırlama yapmaya hazır olduğunuzdan emin olun. checkra1n'in "Restore System" özelliğini kullandıktan sonra bile cihazda jailbreak'e dair bazı izler kalır ve [jailbreak karşıtı uygulamalar bu izleri tespit ederek](https://github.com/checkra1n/BugTracker/issues/279) çalışmayı durdurur.
